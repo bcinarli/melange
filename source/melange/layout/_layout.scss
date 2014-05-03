@@ -1,5 +1,15 @@
 /* @author Bilal Cinarli */
 
 /** -------------------------------------------
- 
+    Layouts Container
     ------------------------------------------- **/
+//
+// Agnostic width definitions from two columns to ten columns
+//
+@import "widths";
+
+
+//
+// Grid definitions for more responsive layout definitions
+//
+@import "grid";

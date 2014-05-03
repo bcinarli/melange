@@ -1,4 +1,15 @@
-/* @author Bilal Cinarli */
+/*! melange.css | @author Bilal Cinarli | melange.io */
+
+/**
+ * Loads the main containers. Each folder has _*.scss container file with the same name.
+ * This container files imports all other files in the same folder.
+ */
+
+
+/** -------------------------------------------
+    Internal Variables
+    ------------------------------------------- **/
+@import "melange/variables/variables";
 
 /** -------------------------------------------
     General Settings
