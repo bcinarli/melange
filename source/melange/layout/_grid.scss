@@ -3,3 +3,48 @@
 /** -------------------------------------------
     Grid Columns
     ------------------------------------------- **/
+/**
+ * Mixin for grid columns
+ *
+ * Apart from our generic widths, columns have gutter for spacing and they are floated by default.
+ */
+@mixin grid-columns(){
+    $column-width: 100/$base-grid-columns;
+
+    @for $i from 1 through $base-grid-columns {
+        .#{nth($numbers, $i)}-#{$column-name} {
+            width: $column-width * $i * 1%;
+        }
+    }
+}
+
+/**
+ * Row
+ * Row encapsulation for columns
+ */
+.#{$row-name} {
+    @extend .group;
+}
+
+/**
+ * Columns
+ * Better controlling the width, gutter defined as right & left padding
+ */
+[class*="-#{$column-name}"] {
+    position: relative;
+    float: left;
+    padding: 0 $base-gutter;
+
+    &:last-child {
+        float: right;
+    }
+
+    &.#{$column-name}-parent { // for nested columns, remove paddings for the parent grid column
+        padding: 0;
+    }
+}
+
+/**
+ * Grid Columns
+ */
+@include grid-columns();
