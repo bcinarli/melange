@@ -57,3 +57,16 @@ label,
             }
         }
     }
+
+
+/**
+ * Field Help
+ *
+ * Although this is not an actual label, it can be used as helper text for the field
+ */
+.field-help {
+    font: {
+        size: .8em;
+        style: italic;
+    }
+}
