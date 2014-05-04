@@ -1,0 +1,43 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Generic Styles
+    ------------------------------------------- **/
+/**
+ * More proper width calculation and better grid,
+ * all elements' box-sizing set to border-box
+ */
+
+ * {
+     &,
+     &:after,
+     &:before {
+         box-sizing: -moz-border-box; /* firefox < 29 */
+         box-sizing: border-box;
+     }
+ }
+
+
+/**
+ * Remove top margin and padding from certain elements
+ * generally we never use top margin anyway
+ */
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, li,
+table, th, td {
+    margin-top: 0;
+    padding: 0;
+}
+
+
+/**
+ * And good-ol friend clearfix
+ * For a meaningful name our clearfix class named as group
+ */
+.group {
+    &:after {
+        content: "";
+        clear: both;
+    }
+}
