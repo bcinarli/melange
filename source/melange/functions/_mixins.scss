@@ -1,5 +1,16 @@
 /* @author Bilal Cinarli */
 
 /** -------------------------------------------
- 
+    Mixins for general usage
     ------------------------------------------- **/
+/**
+ * Adds prefixed version of a property according to listed vendors
+ */
+@mixin prefixer($property, $value, $vendors: webkit moz){
+    @if length($vendors) > 0 { // add prefixed versions if a vendor list is defined
+        @each $vendor in $vendors {
+            -#{$vendor}-#{$property}: #{$value};
+        }
+    }
+    #{$property}: #{$value}; // prefix free value at the end
+}
