@@ -4,6 +4,15 @@
     Default class/definition names
     ------------------------------------------- **/
 /**
+ *  Text field lists
+ */
+$_text_fields: 'input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]';
+$_checkable_fields: 'input[type="checkbox"], input[type="radio"]';
+$_media_fields: 'input[type="file"], input[type="image"]';
+$_button_fields: 'input[type="submit"], input[type="reset"], input[type="button"]';
+
+
+/**
  * Class names for grid
  */
 $row-name   : 'row' !default;

@@ -1,5 +1,81 @@
 /* @author Bilal Cinarli */
 
 /** -------------------------------------------
- 
+    Input Fields
     ------------------------------------------- **/
+/**
+ * Text based (input[type=text] etc.) field styles
+ *
+ * .text-field class is added in order to styling other elements like a text field
+ */
+
+#{$_text_fields},
+textarea,
+.text-field {
+    -webkit-appearance: none;
+    outline: 0;
+    padding: $base-spacing;
+    border: $base-border-width solid $base-border-color;
+    background: $base-field-background;
+    color: inherit;
+
+    &:focus,
+    &:active {
+        border-color: $base-border-highlight;
+        background: $base-field-highlight;
+    }
+
+    &[readonly],
+    &.readonly {
+        cursor: default;
+        border-color: $base-border-readonly;
+        background-color: $base-field-readonly;
+    }
+
+    &.item-error {
+        border-color: $color-error;
+    }
+}
+
+
+/**
+ * Checkable (checkbox, radio) field styles
+ */
+#{$_checkable_fields} {
+    vertical-align: middle;
+
+    /**
+     * Fields and labels together
+     *
+        <label class="item-field">
+            <input type="checkbox" />
+            <span class="item-label">Label</span>
+        </label>
+     */
+    + .field-label,
+    + .item-label {
+        margin-left: 1em;
+        vertical-align: middle;
+    }
+}
+
+
+/**
+ * Other input types
+ */
+#{$_media_fields},
+#{$_button_fields} {
+    width: auto;
+}
+
+
+/**
+ * Textarea
+ *
+ * Textareas are like input text fields in most cases, but they need additional styling
+ * since they are resizable and allows multiple lines
+ */
+textarea {
+    min-height: 3em;
+    resize: vertical; // keep the layout fixed. allow only vertical resizing
+}
