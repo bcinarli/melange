@@ -46,5 +46,8 @@
 
 /**
  * Grid Columns
+ * Sets the grid columns according to column number defined in $base-grid-columns
+ * @see melange/variables/_sizes.scss
+ * @see settings/_sizes.scss
  */
 @include grid-columns();
