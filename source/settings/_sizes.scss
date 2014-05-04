@@ -5,7 +5,7 @@
 /**
  * Spacing in element
  * Sets the padding sizes for an element
- * @default 10px
+ * @default $base-spacing 1em
  */
 $base-spacing: null;
 
@@ -13,8 +13,8 @@ $base-spacing: null;
 /**
  * Grid gutter and columns
  * Defines the grid gutter size and column count in a row
- * $base-gutter: 20px // default
- * $base-grid-columns: 18 // default
+ * @default $base-gutter: 20px
+ * @default $base-grid-columns: 18
  */
 
 $base-gutter: null;
