@@ -3,3 +3,47 @@
 /** -------------------------------------------
     Field Wrappers
     ------------------------------------------- **/
+/**
+ * Fieldset for field wrappers
+ */
+fieldset {
+    @extend %reset;
+}
+
+
+/**
+ * Form Elements Holder
+ * A list or a div for group form elements
+ */
+.form-elements {
+    @extend %reset; // first reset the element styles
+
+    /**
+     * Forms mostly build with unordered list.
+
+        <ul class="form-element group">
+            <li class="group">
+                <label class="item-field">
+                    <span class="item-name">Label</span>
+                    <input />
+                </label>
+            </li>
+        </ul>
+     */
+    li {
+        position: relative;
+        margin-bottom: 1em;
+    }
+}
+
+
+/**
+ * Legend
+ *
+ * Make the legend as a block for better styling and control
+ */
+legend {
+    display: block;
+    width: 100%;
+    margin-bottom: $base-spacing;
+}
