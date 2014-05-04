@@ -4,6 +4,7 @@
     ------------------------------------------- **/
 /**
  * Spacing in element
+ *
  * Sets the padding sizes for an element
  * @default $base-spacing 1em
  */
@@ -12,10 +13,20 @@ $base-spacing: null;
 
 /**
  * Grid gutter and columns
+ *
  * Defines the grid gutter size and column count in a row
  * @default $base-gutter: 20px
  * @default $base-grid-columns: 18
  */
 
-$base-gutter: null;
-$base-grid-columns: null;
+$base-gutter        : null;
+$base-grid-columns  : null;
+
+
+/**
+ * Border Widths
+ *
+ * Applied border with for input fields and table borders
+ * @default $base-border-width: 1px;
+ */
+$base-border-width: null;

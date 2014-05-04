@@ -4,6 +4,35 @@
     Colors
     ------------------------------------------- **/
 /**
+ * Named Colors
+ *
+ * Some named colors for inheriting colors over different variables
+ * @default $color-primary    : #009bdc;
+ * @default $color-secondary  : #67af00;
+ * @default $color-tertiary   : #ffa900;
+ * @default $color-cancel     : #e87352;
+ * @default $color-error      : $color-cancel;
+ * @default $color-text       : #222;
+ * @default $color-light-gray : #e5e5e5;
+ * @default $color-gray       : #c6c6c6;
+ * @default $color-dark-gray  : #a6a6a6;
+ * @default $color-white      : #fff;
+ * @default $color-black      : #000;
+ */
+$color-primary    : null;
+$color-secondary  : null;
+$color-tertiary   : null;
+$color-cancel     : null;
+$color-error      : null;
+$color-text       : null;
+$color-light-gray : null;
+$color-gray       : null;
+$color-dark-gray  : null;
+$color-white      : null;
+$color-black      : null;
+
+
+/**
  * Simple colors for general styling
  * @default $base-color: #222
  */
@@ -11,11 +40,25 @@ $base-color: null;
 
 
 /**
- * Button colors
+ * Border Colors
+ *
+ * Colors applied to border in focus state, disabled state and stationary state
+ * @default $base-border-color: #c6c6c6;
+ * @default $base-border-highlight: #a6a6a6;
+ * @default $base-border-disabled: #e9e9e9;
  */
+$base-border-color      : null;
+$base-border-highlight  : null;
+$base-border-disabled   : null;
+
 
 /**
+ * Button colors
+ */
+/**
  * Default Button
+ *
+ * Unstyled, normal button
  * @default $base-button-color: #e5e5e5;
  * @default $base-button-text-color: #222;
  */
@@ -23,11 +66,9 @@ $base-button-color      : null;
 $base-button-text-color : null;
 
 /**
- * Action Buttons
- */
-
-/**
  * Primary Action Button
+ *
+ * Maybe used for call-to-action button or/and save/submit buttons in forms
  * @default $base-primary-color: #009bdc;
  * @default $base-primary-text-color: #fff;
  */
@@ -36,6 +77,8 @@ $base-primary-text-color: null;
 
 /**
  * Secondary Action Button
+ *
+ * Useful for indication secondary action in a form near the primary action button
  * @default $base-secondary-color: #67af00;
  * @default $base-secondary-text-color: #fff;
  */
@@ -44,6 +87,8 @@ $base-secondary-text-color  : null;
 
 /**
  * Tertiary Action Button
+ *
+ * Useful for actions whether they are not fit for primary or secondary
  * @default $base-tertiary-color: #ffa900;
  * @default $base-tertiary-text-color: #fff;
  */
@@ -52,6 +97,8 @@ $base-tertiary-text-color   : null;
 
 /**
  * Cancel Action Button
+ *
+ * Simply used for cancel button for a form or call-to-action, confirmation etc.
  * @default $base-cancel-color: #e87352;
  * @default $base-cancel-text-color: #fff;
  */
