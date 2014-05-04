@@ -21,7 +21,16 @@
     }
 
     @for $i from 1 through $end {
-        .#{$namespace}#{nth($numbers, $i)}-#{nth($ordinals, $column)} { width: ($chunk-size * $i) * 1%; }
+        $ord: nth($ordinals-plural, $column);
+
+        .#{$namespace}#{nth($numbers, $i)}-#{$ord} { width: ($chunk-size * $i) * 1%; }
+
+        @if $column > 2 and $i == 1 {
+            // also add singular version
+            .#{$namespace}#{nth($numbers, $i)}-#{nth($ordinals, $column)} {
+                @extend .#{$namespace}#{nth($numbers, $i)}-#{$ord};
+            }
+        }
     }
 }
 
