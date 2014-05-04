@@ -1,5 +1,23 @@
 /* @author Bilal Cinarli */
 
+/**
+ * System wide settings
+ *
+ * All the imported values are set to "null" if they have a default value.
+ * So if you want to use them as default, do not change to null value.
+ */
+
 /** -------------------------------------------
- 
+    Settings for default overwrites and
+    GUI related variables
     ------------------------------------------- **/
+//
+// Size definitions
+//
+@import "sizes";
+
+
+//
+// Color definitions
+//
+@import "colors";

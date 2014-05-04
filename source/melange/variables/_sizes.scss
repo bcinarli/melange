@@ -1,0 +1,19 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Default size definitions
+    ------------------------------------------- **/
+/**
+ * Spacing in element
+ * Sets the padding sizes for an element
+ */
+$base-spacing: 10px !default;
+
+
+/**
+ * Grid gutter and columns
+ * Defines the grid gutter size and column count in a row
+ */
+
+$base-gutter: 20px !default;
+$base-grid-columns: 18 !default;

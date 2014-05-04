@@ -5,16 +5,16 @@
  * This container files imports all other files in the same folder.
  */
 
+/** -------------------------------------------
+    General Settings
+    ------------------------------------------- **/
+@import "settings/settings";
+
 
 /** -------------------------------------------
     Internal Variables
     ------------------------------------------- **/
 @import "melange/variables/variables";
-
-/** -------------------------------------------
-    General Settings
-    ------------------------------------------- **/
-@import "settings/settings";
 
 
 /** -------------------------------------------
