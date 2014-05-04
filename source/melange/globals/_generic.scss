@@ -21,8 +21,7 @@
  * Remove margins and padding to use all viewport
  */
 html, body {
-    width: 100%;
-    height: 100%;
+    @include dims(100%);
     margin: 0;
     padding: 0;
 }
@@ -34,6 +33,7 @@ html, body {
  */
 
 h1, h2, h3, h4, h5, h6,
+p,
 ul, ol, li,
 table, th, td {
     margin-top: 0;
