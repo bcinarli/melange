@@ -12,10 +12,20 @@
      &,
      &:after,
      &:before {
-         box-sizing: -moz-border-box; /* firefox < 29 */
-         box-sizing: border-box;
+         @include prefixer(box-sizing, border-box);
      }
  }
+
+/**
+ * Set html and body sizes to 100% for better wrapping
+ * Remove margins and padding to use all viewport
+ */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 
 /**
