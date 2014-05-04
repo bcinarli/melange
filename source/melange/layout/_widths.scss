@@ -3,3 +3,65 @@
 /** -------------------------------------------
     Widths for General Usage
     ------------------------------------------- **/
+/**
+ * Mixin for width calculations
+ *
+ * @param $column: defines how many chunks in one row and calculates the chunk width
+ * @param $namespace prefix for classes in order to use different names for different parts
+ *
+ * @depends $numbers: number-to-name conversion list for human readable class names
+ * @depends $ordinals: defines the human reader total chunks
+ */
+@mixin widths($column: 1, $namespace: ""){
+    $chunk-size: 100/$column;
+    $end: $column - 1; // last size always 100% so no need to define it every time
+
+    @if $end == 0 {
+        $end: 1;
+    }
+
+    @for $i from 1 through $end {
+        .#{$namespace}#{nth($numbers, $i)}-#{nth($ordinals, $column)} { width: ($chunk-size * $i) * 1%; }
+    }
+}
+
+/**
+ * Whole
+ */
+@include widths();
+
+
+/**
+ * Half
+ */
+@include widths(2);
+
+
+/**
+ * Thirds
+ */
+@include widths(3);
+
+
+/**
+ * Quarters
+ */
+@include widths(4);
+
+
+/**
+ * Fifths
+ */
+@include widths(5);
+
+
+/**
+ * Tenths
+ */
+@include widths(10);
+
+
+/**
+ * Twelfths
+ */
+@include widths(12);
