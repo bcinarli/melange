@@ -1,5 +1,59 @@
 /* @author Bilal Cinarli */
 
 /** -------------------------------------------
- 
+    Label Styles
     ------------------------------------------- **/
+/**
+ * Labels
+ *
+ * Fields should always wrapped with a label.
+ * Helper .label class is used for applying label styles for other text elements
+ *
+    <label class="item-field">
+        <span class="item-label"></span>
+        <input type="text" />
+    </label>
+ *
+ */
+
+label,
+.label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    &.item-field {
+        margin-right: 1em;
+    }
+
+    &.item-stacked {
+        margin-bottom: 1em;
+    }
+}
+
+    /**
+     * Label texts
+     */
+    .item-label,
+    .field-label {
+        position: relative;
+        display: inline-block;
+
+        /**
+         * When item is stacked, label text will be over the label input
+         */
+        .item-stacked & {
+            display: block;
+        }
+
+        /**
+         * Required field has a star at the beginning of label
+         */
+        .required & {
+            &:before {
+                content: "*";
+                position: absolute;
+                left: -10px;
+            }
+        }
+    }
