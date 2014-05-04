@@ -1,0 +1,19 @@
+/* @author Bilal Cinarli */
+
+/**
+ * Not real functions of mixins but set of definitions for resetting or reformatting an element
+ */
+
+/** -------------------------------------------
+    Helper Definitions
+    ------------------------------------------- **/
+/**
+ * Hard reset for an element
+ */
+%reset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    list-style: none;
+}
