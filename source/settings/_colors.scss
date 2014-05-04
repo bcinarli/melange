@@ -8,3 +8,52 @@
  * @default $base-color: #222
  */
 $base-color: null;
+
+
+/**
+ * Button colors
+ */
+
+/**
+ * Default Button
+ * @default $base-button-color: #e5e5e5;
+ * @default $base-button-text-color: #222;
+ */
+$base-button-color      : null;
+$base-button-text-color : null;
+
+/**
+ * Action Buttons
+ */
+
+/**
+ * Primary Action Button
+ * @default $base-primary-color: #009bdc;
+ * @default $base-primary-text-color: #fff;
+ */
+$base-primary-color     : null;
+$base-primary-text-color: null;
+
+/**
+ * Secondary Action Button
+ * @default $base-secondary-color: #67af00;
+ * @default $base-secondary-text-color: #fff;
+ */
+$base-secondary-color       : null;
+$base-secondary-text-color  : null;
+
+/**
+ * Tertiary Action Button
+ * @default $base-tertiary-color: #ffa900;
+ * @default $base-tertiary-text-color: #fff;
+ */
+$base-tertiary-color        : null;
+$base-tertiary-text-color   : null;
+
+/**
+ * Cancel Action Button
+ * @default $base-cancel-color: #e87352;
+ * @default $base-cancel-text-color: #fff;
+ */
+$base-cancel-color      : null;
+$base-cancel-text-color : null;

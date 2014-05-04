@@ -1,0 +1,53 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Colors
+    ------------------------------------------- **/
+/**
+ * Simple colors for general styling
+ */
+$base-color: #222 !default;
+
+
+/**
+ * Button colors
+ */
+
+/**
+ * Default Button
+ * Unstyled, normal button
+ */
+$base-button-color      : #e5e5e5 !default;
+$base-button-text-color : #222 !default;
+
+/**
+ * Action Buttons
+ */
+
+/**
+ * Primary Action Button
+ * Maybe used for call-to-action button or/and save/submit buttons in forms
+ */
+$base-primary-color     : #009bdc !default;
+$base-primary-text-color: #fff !default;
+
+/**
+ * Secondary Action Button
+ * Useful for indication secondary action in a form near the primary action button
+ */
+$base-secondary-color       : #67af00 !default;
+$base-secondary-text-color  : #fff !default;
+
+/**
+ * Tertiary Action Button
+ * Useful for actions whether they are not fit for primary or secondary
+ */
+$base-tertiary-color        : #ffa900 !default;
+$base-tertiary-text-color   : #fff !default;
+
+/**
+ * Cancel Action Button
+ * Simply used for cancel button for a form or call-to-action, confirmation etc.
+ */
+$base-cancel-color      : #e87352 !default;
+$base-cancel-text-color : #fff !default;

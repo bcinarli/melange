@@ -1,5 +1,37 @@
 /* @author Bilal Cinarli */
 
 /** -------------------------------------------
- 
+    Button Styles
     ------------------------------------------- **/
+/**
+ * In most cases, using buttons with button tag allows more styling options
+ * it is crossbrowser and meaningful. Also ".button" class is added in order to
+ * get button-like elements
+ */
+button,
+.button {
+    -webkit-appearence: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: $base-spacing 2*$base-spacing;
+    background: $base-button-color;
+    color: $base-button-text-color;
+    font-weight: bold;
+    line-height: normal;
+    outline: none;
+    text-decoration: none;
+    user-select: none;
+    white-space: normal;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+
+    &:disabled,
+    &.disabled {
+        cursor: default;
+        background: opacify($base-button-color, .15);
+    }
+}
