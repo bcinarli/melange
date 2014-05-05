@@ -1,0 +1,31 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Table Styles
+    ------------------------------------------- **/
+/**
+ * Table
+ */
+table {
+    width: 100%;
+}
+
+
+/**
+ * TFoot
+ */
+tfoot {
+    td:only-child {
+        text-align: right;
+    }
+}
+
+
+/**
+ * Cells
+ */
+th,
+td {
+    padding: $base-spacing/2;
+    text-align: left;
+}
