@@ -24,6 +24,15 @@
  */
 .#{$row-name} {
     @extend .group;
+
+    &.pull {
+        margin-left: -$base-gutter;
+    }
+
+    &.pull-push {
+        margin-left: -$base-gutter;
+        margin-right: -$base-gutter;
+    }
 }
 
 /**
@@ -34,10 +43,6 @@
     position: relative;
     float: left;
     padding: 0 $base-gutter;
-
-    &:last-child {
-        float: right;
-    }
 
     &.#{$column-name}-parent { // for nested columns, remove paddings for the parent grid column
         padding: 0;
