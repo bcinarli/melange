@@ -48,6 +48,7 @@ table, th, td {
 .group {
     &:after {
         content: "";
+        display: table;
         clear: both;
     }
 }
