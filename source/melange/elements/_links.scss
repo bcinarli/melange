@@ -3,3 +3,31 @@
 /** -------------------------------------------
     Link & Nav Styles
     ------------------------------------------- **/
+/**
+ * Links
+ *
+ * Basic anchor styling
+ */
+a {
+    display: inline-block;
+    padding: 2px; // increase clickable area for the links
+
+    nav & { // remove text decoration in navigation links
+        text-decoration: none;
+    }
+}
+
+
+/**
+ * Nav
+ *
+ * Navigation items
+ */
+nav {
+    // reset unordered lists in navigation
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
