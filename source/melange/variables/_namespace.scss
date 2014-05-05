@@ -17,3 +17,13 @@ $_button_fields: 'input[type="submit"], input[type="reset"], input[type="button"
  */
 $row-name   : 'row' !default;
 $column-name: 'column' !default;
+
+
+/**
+ * Button names for action
+ */
+$action-button      : '-action' !default; // only used for similar class selector
+$primary-button     : 'primary-action' !default;
+$secondary-button   : 'secondary-action' !default;
+$tertiary-button    : 'tertiary-action' !default;
+$cancel-button      : 'cancel-action' !default;

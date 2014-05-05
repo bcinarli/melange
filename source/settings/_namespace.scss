@@ -10,3 +10,19 @@
  */
 $row-name   : null;
 $column-name: null;
+
+
+/**
+ * Button names for action
+ *
+ * @default $action-button: '-action'; // only used for similar class selector
+ * @default $primary-button: 'primary-action';
+ * @default $secondary-button: 'secondary-action';
+ * @default $tertiary-button: 'tertiary-action';
+ * @default $cancel-button: 'cancel-action';
+ */
+$action-button      : null; // only used for similar class selector
+$primary-button     : null;
+$secondary-button   : null;
+$tertiary-button    : null;
+$cancel-button      : null;

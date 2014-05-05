@@ -8,12 +8,13 @@
  * it is crossbrowser and meaningful. Also ".button" class is added in order to
  * get button-like elements
  */
+%button,
 button,
 .button {
     -webkit-appearence: none;
     display: inline-block;
     cursor: pointer;
-    padding: $base-spacing 2*$base-spacing;
+    padding: .7*$base-spacing $base-spacing;
     background: $base-button-color;
     color: $base-button-text-color;
     font-weight: bold;
@@ -34,4 +35,28 @@ button,
         cursor: default;
         background: opacify($base-button-color, .15);
     }
+}
+
+[class*="#{$action-button}"] {
+    @extend %button;
+}
+
+.#{$primary-button} {
+    background-color: $base-primary-color;
+    color: $base-primary-text-color;
+}
+
+.#{$secondary-button} {
+    background-color: $base-secondary-color;
+    color: $base-secondary-text-color;
+}
+
+.#{$tertiary-button} {
+    background-color: $base-tertiary-color;
+    color: $base-tertiary-text-color;
+}
+
+.#{$cancel-button} {
+    background-color: $base-cancel-color;
+    color: $base-cancel-text-color;
 }
