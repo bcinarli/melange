@@ -17,3 +17,23 @@
     background: none;
     list-style: none;
 }
+
+
+/**
+ * Vertical Center
+ */
+%vertical {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5em;
+}
+
+
+/**
+ * Horizontal Center
+ */
+%horizontal {
+    position: absolute;
+    left: 50%;
+    margin-left: -.5em;
+}
