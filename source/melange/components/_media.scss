@@ -1,0 +1,28 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Media Component
+    ------------------------------------------- **/
+/**
+ * Media Item
+ *
+ * A media item indicates a block consists with a media item (image, flash, video etc.) and a text content
+ */
+
+.media {
+    @extend .group;
+}
+
+.media-visual {
+    display: block;
+    float: left;
+    margin-right: $base-spacing;
+}
+
+.media-text {
+    + .media-visual { // visual added after text
+        float: right;
+        margin-right: auto;
+        margin-left: $base-spacing;
+    }
+}
