@@ -36,20 +36,37 @@ $color-black      : null;
  * Simple colors for general styling
  * @default $base-color: #222
  */
-$base-color: null;
+$base-color: $color-text;
 
 
 /**
  * Border Colors
  *
- * Colors applied to border in focus state, disabled state and stationary state
+ * Colors applied to border in focus, disabled, readonly and stationary state
  * @default $base-border-color: #c6c6c6;
  * @default $base-border-highlight: #a6a6a6;
  * @default $base-border-disabled: #e9e9e9;
+ * @default $base-border-readonly: #c6c6c6;
  */
-$base-border-color      : null;
-$base-border-highlight  : null;
-$base-border-disabled   : null;
+$base-border-color      : $color-gray;
+$base-border-highlight  : $color-dark-gray;
+$base-border-disabled   : $color-light-gray;
+$base-border-readonly   : $color-gray;
+
+
+/**
+ * Field Background Colors
+ *
+ * Color applied to field background in focus, disabled, readonly and stationary state
+ * @default $base-field-background: #fff;
+ * @default $base-field-highlight: #fff;
+ * @default $base-field-disabled: #c6c6c6;
+ * @default $base-field-readonly: #e5e5e5;
+ */
+$base-field-background  : $color-light-gray;
+$base-field-highlight   : $color-white;
+$base-field-disabled    : $color-gray;
+$base-field-readonly    : $color-light-gray;
 
 
 /**
@@ -62,8 +79,8 @@ $base-border-disabled   : null;
  * @default $base-button-color: #e5e5e5;
  * @default $base-button-text-color: #222;
  */
-$base-button-color      : null;
-$base-button-text-color : null;
+$base-button-color      : $color-light-gray;
+$base-button-text-color : $color-dark-gray;
 
 /**
  * Primary Action Button
@@ -72,8 +89,8 @@ $base-button-text-color : null;
  * @default $base-primary-color: #009bdc;
  * @default $base-primary-text-color: #fff;
  */
-$base-primary-color     : null;
-$base-primary-text-color: null;
+$base-primary-color     : $color-primary;
+$base-primary-text-color: $color-white;
 
 /**
  * Secondary Action Button
@@ -82,8 +99,8 @@ $base-primary-text-color: null;
  * @default $base-secondary-color: #67af00;
  * @default $base-secondary-text-color: #fff;
  */
-$base-secondary-color       : null;
-$base-secondary-text-color  : null;
+$base-secondary-color       : $color-secondary;
+$base-secondary-text-color  : $color-white;
 
 /**
  * Tertiary Action Button
@@ -92,8 +109,8 @@ $base-secondary-text-color  : null;
  * @default $base-tertiary-color: #ffa900;
  * @default $base-tertiary-text-color: #fff;
  */
-$base-tertiary-color        : null;
-$base-tertiary-text-color   : null;
+$base-tertiary-color        : $color-tertiary;
+$base-tertiary-text-color   : $color-white;
 
 /**
  * Cancel Action Button
@@ -102,5 +119,5 @@ $base-tertiary-text-color   : null;
  * @default $base-cancel-color: #e87352;
  * @default $base-cancel-text-color: #fff;
  */
-$base-cancel-color      : null;
-$base-cancel-text-color : null;
+$base-cancel-color      : $color-cancel;
+$base-cancel-text-color : $color-white;
