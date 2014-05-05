@@ -18,6 +18,10 @@ textarea,
     border: $base-border-width solid $base-border-color;
     background: $base-field-background;
     color: inherit;
+    font: {
+        size: 1rem;
+        weight: normal;
+    }
 
     &:focus,
     &:active {
@@ -54,7 +58,7 @@ textarea,
      */
     + .field-label,
     + .item-label {
-        margin-left: 1em;
+        margin-left: .25em;
         vertical-align: middle;
     }
 }
