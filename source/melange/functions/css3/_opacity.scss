@@ -1,0 +1,13 @@
+/** -------------------------------------------
+    Opacity
+    ------------------------------------------- **/
+/**
+ * Opacity mixin
+ *
+ * @param $opacity : opacity
+ */
+
+@mixin opacity($opacity) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}
