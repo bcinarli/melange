@@ -1,15 +1,15 @@
 /* @author Bilal Cinarli */
 
 /** -------------------------------------------
-    Functions Container
+    Melange internal System Methods
     ------------------------------------------- **/
+//
+// Functions
+//
+@import "functions/functions";
+
+
 //
 // Mixins
 //
-@import "mixins";
-
-
-//
-// CSS3 Mixins
-//
-@import "css3/css3";
+@import "mixins/mixins";
