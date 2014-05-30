@@ -12,7 +12,7 @@
     $column-width: 100/$base-grid-columns;
 
     @for $i from 1 through $base-grid-columns {
-        .#{nth($numbers, $i)}-#{$column-name} {
+        .#{$namespace}#{nth($numbers, $i)}-#{$column-name} {
             width: $column-width * $i * 1%;
         }
     }
@@ -22,7 +22,7 @@
  * Row
  * Row encapsulation for columns
  */
-.#{$row-name} {
+.#{$namespace}#{$row-name} {
     @extend .group;
 
     &.pull {
@@ -44,7 +44,7 @@
     float: left;
     padding: 0 $base-gutter;
 
-    &.#{$column-name}-parent { // for nested columns, remove paddings for the parent grid column
+    &.#{$namespace}#{$column-name}-parent { // for nested columns, remove paddings for the parent grid column
         padding: 0;
     }
 }

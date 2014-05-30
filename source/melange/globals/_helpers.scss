@@ -37,3 +37,19 @@
     left: 50%;
     margin-left: -.5em;
 }
+
+/**
+ * Center Alignment
+ */
+%center {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/**
+ * Floats
+ */
+%column {
+    float: left;
+}

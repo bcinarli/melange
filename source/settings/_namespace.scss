@@ -4,6 +4,12 @@
     Default class/definition names
     ------------------------------------------- **/
 /**
+ * Name space prefix
+ * Adds a defined namespace prefix to generated class names
+ */
+$namespace : null;
+
+/**
  * Class names for grid
  * @default $row-name: 'row'
  * @default $column-name: 'column'

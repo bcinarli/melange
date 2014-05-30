@@ -4,6 +4,12 @@
     Default class/definition names
     ------------------------------------------- **/
 /**
+ * Name space prefix
+ * Adds a defined namespace prefix to generated class names
+ */
+$namespace: null !default;
+
+/**
  *  Text field lists
  */
 $_text_fields: 'input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]';
@@ -11,19 +17,18 @@ $_checkable_fields: 'input[type="checkbox"], input[type="radio"]';
 $_media_fields: 'input[type="file"], input[type="image"]';
 $_button_fields: 'input[type="submit"], input[type="reset"], input[type="button"]';
 
-
 /**
  * Class names for grid
  */
-$row-name   : 'row' !default;
+$row-name: 'row' !default;
 $column-name: 'column' !default;
-
 
 /**
  * Button names for action
  */
-$action-button      : '-action' !default; // only used for similar class selector
-$primary-button     : 'primary-action' !default;
-$secondary-button   : 'secondary-action' !default;
-$tertiary-button    : 'tertiary-action' !default;
-$cancel-button      : 'cancel-action' !default;
+$action-button: '-action' !default;
+// only used for similar class selector
+$primary-button: 'primary-action' !default;
+$secondary-button: 'secondary-action' !default;
+$tertiary-button: 'tertiary-action' !default;
+$cancel-button: 'cancel-action' !default;

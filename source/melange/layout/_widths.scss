@@ -12,7 +12,7 @@
  * @depends $numbers: number-to-name conversion list for human readable class names
  * @depends $ordinals: defines the human reader total chunks
  */
-@mixin widths($column: 1, $namespace: ""){
+@mixin widths($column: 1){
     $chunk-size: 100/$column;
     $end: $column - 1; // last size always 100% so no need to define it every time
 
@@ -23,12 +23,15 @@
     @for $i from 1 through $end {
         $ord: nth($ordinals-plural, $column);
 
-        .#{$namespace}#{nth($numbers, $i)}-#{$ord} { width: ($chunk-size * $i) * 1%; }
+        .#{nth($numbers, $i)}-#{$ord} {
+            @extend %column;
+            width: ($chunk-size * $i) * 1%;
+        }
 
         @if $column > 2 and $i == 1 {
             // also add singular version
-            .#{$namespace}#{nth($numbers, $i)}-#{nth($ordinals, $column)} {
-                @extend .#{$namespace}#{nth($numbers, $i)}-#{$ord};
+            .#{nth($numbers, $i)}-#{nth($ordinals, $column)} {
+                @extend .#{nth($numbers, $i)}-#{$ord};
             }
         }
     }
