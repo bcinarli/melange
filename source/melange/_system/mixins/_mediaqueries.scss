@@ -6,11 +6,11 @@
 /**
  * Retina Image
  */
-@mixin retina-image($image, $ext: '.png'){
-    background-image: url('#{$images}$image#{$ext}');
+@mixin retina-image($image, $ext: 'png'){
+    background-image: url('#{$images}#{$image}.#{$ext}');
 
     @include retina(){
-        background-image: url('#{$images}$image#{$retina-suffix}#{$ext}');
+        background-image: url('#{$images}#{$image}#{$retina-suffix}.#{$ext}');
     }
 }
 
