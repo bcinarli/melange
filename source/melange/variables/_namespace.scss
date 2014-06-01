@@ -26,9 +26,15 @@ $column-name: 'column' !default;
 /**
  * Button names for action
  */
-$action-button: '-action' !default;
-// only used for similar class selector
+$action-button: '-action' !default; // only used for similar class selector
 $primary-button: 'primary-action' !default;
 $secondary-button: 'secondary-action' !default;
 $tertiary-button: 'tertiary-action' !default;
 $cancel-button: 'cancel-action' !default;
+
+/**
+ * Folders
+ * Not actually a namespace but folder names also have different preferences
+ */
+$images : '../images/' !default;
+$retina-suffix: '@2x' !default;

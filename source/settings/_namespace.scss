@@ -32,3 +32,12 @@ $primary-button     : null;
 $secondary-button   : null;
 $tertiary-button    : null;
 $cancel-button      : null;
+
+/**
+ * Folders
+ * Not actually a namespace but folder names also have different preferences
+ * @default $images: '../images/'; relative to styles folder
+ * @default $retina-suffix: '@2x'
+ */
+$images : null;
+$retina-suffix: null;
