@@ -26,37 +26,37 @@ label,
         margin-right: 1em;
     }
 
-    &.item-stacked {
+    &.item-stacked:not(:only-child) {
         margin-bottom: 1em;
     }
 }
 
+/**
+ * Label texts
+ */
+.item-label,
+.field-label {
+    position: relative;
+    display: inline-block;
+
     /**
-     * Label texts
+     * When item is stacked, label text will be over the label input
      */
-    .item-label,
-    .field-label {
-        position: relative;
-        display: inline-block;
+    .item-stacked & {
+        display: block;
+    }
 
-        /**
-         * When item is stacked, label text will be over the label input
-         */
-        .item-stacked & {
-            display: block;
-        }
-
-        /**
-         * Required field has a star at the beginning of label
-         */
-        .required & {
-            &:before {
-                content: "*";
-                position: absolute;
-                left: -10px;
-            }
+    /**
+     * Required field has a star at the beginning of label
+     */
+    .required & {
+        &:before {
+            content: "*";
+            position: absolute;
+            left: -10px;
         }
     }
+}
 
 
 /**

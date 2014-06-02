@@ -14,7 +14,7 @@ textarea,
 .text-field {
     -webkit-appearance: none;
     outline: 0;
-    padding: $base-spacing;
+    padding: $base-input-spacing;
     border: $base-border-width solid $base-border-color;
     background: $base-field-background;
     color: inherit;
