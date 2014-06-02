@@ -1,0 +1,23 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Animation Related Mixins
+    ------------------------------------------- **/
+/**
+ * App Transition
+ *
+ * General transition definition for app
+ */
+@mixin app-transition(){
+    @include transition(all $base-duration $base-easing);
+}
+
+
+/**
+ * CSS Transition
+ *
+ * Outputs CSS3 transition code with defined prefixes
+ */
+@mixin transition($content){
+    @include prefixer(transition, $content, webkit);
+}
