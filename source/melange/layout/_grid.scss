@@ -12,8 +12,25 @@
     $column-width: 100/$base-grid-columns;
 
     @for $i from 1 through $base-grid-columns {
-        .#{$namespace}#{nth($numbers, $i)}-#{$column-name} {
+        .#{$namespace}#{nth($numbers, $i)}-#{$column-name},
+        .#{$namespace}#{nth($numbers, $i)}-#{$column-name-plural} {
             width: $column-width * $i * 1%;
+        }
+    }
+}
+
+/**
+ * Offset settings for grid columns
+ *
+ * When you need much larger spacing between grid columns, you can offset a column by one or more column widths
+ */
+@mixin offset(){
+    $column-width: 100/$base-grid-columns;
+    $last-offset: $base-grid-columns - 1;
+
+    @for $i from 1 through $last-offset {
+        .#{$namespace}offset-by-#{nth($numbers, $i)} {
+            margin-left: $column-width * $i * 1%;
         }
     }
 }
@@ -56,3 +73,9 @@
  * @see settings/_sizes.scss
  */
 @include grid-columns();
+
+/**
+ * Offsets
+ * Sets the offsets classes according to column number defined in $base-grid-columns
+ */
+@include offset();
