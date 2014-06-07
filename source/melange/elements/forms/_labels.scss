@@ -31,32 +31,32 @@ label,
     }
 }
 
-/**
- * Label texts
- */
-.item-label,
-.field-label {
-    position: relative;
-    display: inline-block;
-
     /**
-     * When item is stacked, label text will be over the label input
+     * Label texts
      */
-    .item-stacked & {
-        display: block;
-    }
+    .item-label,
+    .field-label {
+        position: relative;
+        display: inline-block;
 
-    /**
-     * Required field has a star at the beginning of label
-     */
-    .required & {
-        &:before {
-            content: "*";
-            position: absolute;
-            left: -10px;
+        /**
+         * When item is stacked, label text will be over the label input
+         */
+        .item-stacked & {
+            display: block;
+        }
+
+        /**
+         * Required field has a star at the beginning of label
+         */
+        .required & {
+            &:before {
+                content: "*";
+                position: absolute;
+                left: -10px;
+            }
         }
     }
-}
 
 
 /**

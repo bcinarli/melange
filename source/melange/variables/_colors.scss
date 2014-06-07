@@ -15,7 +15,7 @@ $color-cancel     : #e87352 !default;
 $color-error      : $color-cancel !default;
 $color-text       : #222 !default;
 $color-light-text : #999 !default;
-$color-light-gray : #e5e5e5 !default;
+$color-light-gray : #f9f9f9 !default;
 $color-gray       : #c6c6c6 !default;
 $color-dark-gray  : #a6a6a6 !default;
 $color-white      : #fff !default;
@@ -26,6 +26,8 @@ $color-black      : #000 !default;
  * Simple colors for general styling
  */
 $base-color: $color-text !default;
+$base-anchor-color: $color-text !default;
+$base-anchor-highlight: $color-primary !default;
 
 
 /**

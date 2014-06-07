@@ -22,11 +22,14 @@ $_button_fields: 'input[type="submit"], input[type="reset"], input[type="button"
  */
 $row-name: 'row' !default;
 $column-name: 'column' !default;
+$column-name-plural: 'columns' !default;
 
 /**
  * Button names for action
  */
-$action-button: '-action' !default; // only used for similar class selector
+// only used for similar class selector
+$action-button: '-action' !default;
+// other button classes
 $primary-button: 'primary-action' !default;
 $secondary-button: 'secondary-action' !default;
 $tertiary-button: 'tertiary-action' !default;
