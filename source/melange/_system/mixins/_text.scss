@@ -34,35 +34,3 @@
         font-size: rem($font-size);
     }
 }
-
-
-/**
- * REM units for font-sizes
- */
-@mixin rem-units($font-size){
-    @if($font-size == inherit){
-        font-size: inherit;
-    }
-    @else {
-        $rem-size: '';
-        $u: unit($font-size);
-
-        // rem calculations
-        @if ($u == 'rem'){
-            $rem-size: $font-size;
-        }
-        @else {
-            $convert: $font-size/$base-font-size;
-            $rem-size: #{$convert}rem;
-        }
-
-        // font-size fallback for IE8
-        @if ($support-for-ie8 == true){
-            @if($u == 'px'){
-
-            }
-        }
-
-        font-size: $rem-size;
-    }
-}
