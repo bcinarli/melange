@@ -1,7 +1,7 @@
 /* @author Bilal Cinarli */
 
 /** -------------------------------------------
-    Animation Related Mixins
+    Transition Related Mixins
     ------------------------------------------- **/
 /**
  * App Transition
@@ -18,6 +18,6 @@
  *
  * Outputs CSS3 transition code with defined prefixes
  */
-@mixin transition($content){
+@mixin transition($content...){
     @include prefixer(transition, $content, webkit);
 }
