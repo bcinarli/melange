@@ -1,0 +1,23 @@
+{
+  "name": "Melange",
+  "version": "0.1.0",
+  "homepage": "https://github.com/bcinarli/melange",
+  "authors": [
+    "Bilal Çınarlı <bcinarli@gmail.com>"
+  ],
+  "description": "A low level SASS based CSS framework for general usage in",
+  "main": "source/_melange.scss",
+  "keywords": [
+    "SASS",
+    "CSS",
+    "CSS framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
