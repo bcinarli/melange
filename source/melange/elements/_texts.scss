@@ -6,6 +6,10 @@
 /**
  * Body base font and color definitions
  */
+html {
+    font-size: $base-font-size;
+}
+
 body {
     font: #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $base-color;
