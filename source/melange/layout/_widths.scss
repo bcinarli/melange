@@ -24,7 +24,9 @@
         $ord: nth($ordinals-plural, $column);
 
         .#{nth($numbers, $i)}-#{$ord} {
-            @extend %column;
+            @if($base-float-widths == true){
+                @extend %column;
+            }
             width: ($chunk-size * $i) * 1%;
         }
 
@@ -65,6 +67,12 @@
  * Fifths
  */
 @include widths(5);
+
+
+/**
+ * Eights
+ */
+@include widths(8);
 
 
 /**

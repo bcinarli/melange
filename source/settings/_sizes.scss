@@ -17,12 +17,16 @@ $base-input-spacing: null;
  * Grid gutter and columns
  *
  * Defines the grid gutter size and column count in a row
+ * Grid columns floated by default. But it is optional whether float or not
+ * for percentage widths.
  * @default $base-gutter: 20px
  * @default $base-grid-columns: 18
+ * @default $base-float-widths: true
  */
 
 $base-gutter        : null;
 $base-grid-columns  : null;
+$base-float-widths  : null;
 
 
 /**
