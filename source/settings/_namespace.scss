@@ -13,10 +13,11 @@ $namespace : null;
  * Class names for grid
  * @default $row-name: 'row'
  * @default $column-name: 'column'
+ * @default $column-name-plural: 'columns'
  */
-$row-name   : null;
-$column-name: null;
-
+$row-name          : null;
+$column-name       : null;
+$column-name-plural: null;
 
 /**
  * Button names for action
