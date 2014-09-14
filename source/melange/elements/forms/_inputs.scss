@@ -16,7 +16,7 @@ textarea,
     outline: 0;
     padding: $base-input-spacing;
     border: $base-border-width solid $base-border-color;
-    background: $base-field-background;
+    //background: $base-field-background;
     color: inherit;
     font: {
         size: 1rem;
@@ -58,6 +58,7 @@ textarea,
      */
     + .field-label,
     + .item-label {
+        font-weight: normal;
         margin-left: .25em;
         vertical-align: middle;
     }
@@ -69,7 +70,7 @@ textarea,
  */
 #{$_media_fields},
 #{$_button_fields} {
-    width: auto;
+    //width: auto;
 }
 
 
