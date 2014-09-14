@@ -23,7 +23,7 @@
  * Vertical Center
  */
 %vertical {
-    position: absolute;
+    position: absolute !important;
     top: 50%;
     margin-top: -.5em;
 }
@@ -33,7 +33,7 @@
  * Horizontal Center
  */
 %horizontal {
-    position: absolute;
+    position: absolute !important;
     left: 50%;
     margin-left: -.5em;
 }
