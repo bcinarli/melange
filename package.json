@@ -1,13 +1,16 @@
 {
   "name": "melange",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "A low level SASS based CSS framework for general usage",
   "repository": {
     "type": "git",
     "url": "https://github.com/bcinarli/melange.git"
   },
+  "dependencies": {
+	"kafein": "latest"
+  },
   "devDependencies": {
-	  "kafein": "latest"
+	  "sass": "latest"
   },
   "keywords": [
     "sass",
