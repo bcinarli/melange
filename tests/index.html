@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Melange Tests with default settings</title>
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+		
+	<link rel="stylesheet" href="tests.css" />
+	
+	<style>
+		.page-wrap { width: 960px; padding: 50px 0; margin: 0 auto; }
+		pre { padding: 1em; border: 1px solid #eee; border-radius: 3px; background-color: #fafafa; }
+		.tests { padding-bottom: 2em; margin-bottom: 2em; border-bottom: 1px solid #eee; }
+		.tests:last-child { padding-bottom: 0; border-bottom: 0; }
+		.test { position: relative; margin-top: 1em; }
+		.test:first-child { margin-top: 0; }
+	</style>
+</head>
+	
+<body>
+	<div id="wrapper" class="page-wrap">
+		<section class="tests">
+			<h2 class="tests-heading">Texts</h2>
+			
+			<article class="test">
+				<h1>A New Hope</h1>
+				<p>Escape is not his plan. I must face him, alone. Hokey religions and ancient weapons are no match for a good blaster at your side, kid. You mean it controls your actions? Ye-ha! As you wish. Look, I ain't in this for your revolution, and I'm not in it for you, Princess. I expect to be well paid. I'm in it for the money.</p>
+				<h2>Knights of the Old Republic</h2>
+				<p>A tremor in the Force. The last time I felt it was in the presence of my old master. I'm trying not to, kid. What good is a reward if you ain't around to use it? Besides, attacking that battle station ain't my idea of courage. It's more like&hellip;suicide. All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? The Force is strong with this one. I have you now.</p>
+				<ul>
+					<li>I have traced the Rebel spies to her. Now she is my only link to finding their secret base.</li>
+					<li>No! Alderaan is peaceful. We have no weapons. You can't possibly&hellip;</li>
+					<li>I call it luck.</li>
+					<li>The Force is strong with this one. I have you now.</li>
+				</ul>
+				<h3>Jedi Academy</h3>
+				<p>The more you tighten your grip, Tarkin, the more star systems will slip through your fingers. Still, she's got a lot of spirit. I don't know, what do you think? In my experience, there is no such thing as luck. Don't underestimate the Force. Escape is not his plan. I must face him, alone. The plans you refer to will soon be back in our hands.</p>
+				<h4>The Clone Wars</h4>
+				<p>Don't act so surprised, Your Highness. You weren't on any mercy mission this time. Several transmissions were beamed to this ship by Rebel spies. I want to know what happened to the plans they sent you. Don't underestimate the Force. Oh God, my uncle. How am I ever gonna explain this? I have traced the Rebel spies to her. Now she is my only link to finding their secret base. I need your help, Luke. She needs your help. I'm getting too old for this sort of thing.</p>
+				<ol>
+					<li>I want to come with you to Alderaan. There's nothing for me here now. I want to learn the ways of the Force and be a Jedi, like my father before me.</li>
+					<li>I care. So, what do you think of her, Han?</li>
+					<li>Red Five standing by.</li>
+				</ol>
+				<h5>Rebel Mission to Ord Mantell</h5>
+				<p>What!? Hokey religions and ancient weapons are no match for a good blaster at your side, kid. Hokey religions and ancient weapons are no match for a good blaster at your side, kid. Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going. Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. You mean it controls your actions?</p>
+			</article>
+		</section>
+		
+		<section class="tests">
+			<h2 class="tests-heading">Forms</h2>
+			
+			<article class="test">
+				<h3 class="test-heading">Default Form</h3>
+				
+				<form id="default-form">
+					<fieldset class="form-elements">
+						<legend>Sample default form</legend>
+						<label class="item item-field">
+							<span class="item-label">Sample Item</span>
+							<input type="text" placeholder="Default item in sample form" size="30" />
+						</label>
+						<button class="primary-action">Sample Button</button>
+					</fieldset>
+				</form>
+			</article>
+			
+			<article class="test">
+				<h3 class="test-heading">Stacked Form</h3>
+				
+				<form id="stacked-form">
+					<fieldset>
+						<legend>Stacked Form</legend>
+						
+						<ol class="form-elements">
+							<li>
+								<label class="item item-stacked">
+									<span class="item-label">Username</span>
+									<input type="text" placeholder="Email or nickname" size="20" />
+								</label>
+							</li>
+							<li>
+								<label class="item item-stacked">
+									<span class="item-label">Name</span>
+									<input type="text" placeholder="Your name" size="20" />
+								</label>
+							</li>
+							<li>
+								<label class="item item-stacked">
+									<span class="item-label">Some Selection</span>
+									<select>
+										<option>One option</option>
+										<option>Another option</option>
+									</select>
+								</label>
+							</li>
+							<li>
+								<label class="item item-field">
+									<input type="checkbox" />
+									<span class="item-label">And a checkbox</span>
+								</label>
+							</li>
+						</ol>
+					</fieldset>
+				</form>
+			</article>
+		</section>	
+	</div>
+</body>
+</html>	
