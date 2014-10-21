@@ -1,0 +1,38 @@
+/* @author Bilal Cinarli */
+
+/**
+ * Position related definition
+ */
+
+/** -------------------------------------------
+    Positions
+    ------------------------------------------- **/
+/**
+ * Floats
+ */
+.move-to-start,
+[dir="rtl"] .move-to-end {
+	float: left;
+}
+
+.move-to-end,
+[dir="rtl"] .move-to-start {
+	float: right;
+}
+
+/**
+ * Aligns
+ * start and end values for text-aligns are direction safe.
+ * no need to additional definition for rtl/ltr differences.
+ */
+.align-start {
+	// will align to left in ltr
+	// will align to right in rtl
+	text-align: start;
+}
+
+.align-end {
+	// will align to right in ltr
+	// will align to left in rtl
+	text-align: end;
+}
