@@ -7,14 +7,25 @@
  * More proper width calculation and better grid,
  * all elements' box-sizing set to border-box
  */
+html {
+	box-sizing: border-box;
+}
 
  * {
      &,
      &:after,
      &:before {
-         @include prefixer(box-sizing, border-box);
+         box-sizing: inherit;
      }
  }
+ 
+ /**
+  * Overwrite normalize.css's box-sizing definitions
+  */
+hr,
+input[type="search"] {
+	box-sizing: inherit;
+}
 
 /**
  * Set html and body sizes to 100% for better wrapping
