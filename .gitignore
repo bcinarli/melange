@@ -3,3 +3,5 @@
 config.codekit
 output
 codekit-project-icon.png
+bower_components
+npm-debug.log

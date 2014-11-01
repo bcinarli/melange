@@ -7,10 +7,14 @@
   ],
   "description": "A low level SASS based CSS framework for general usage",
   "main": "lib/_melange.scss",
+  "devDependencies": {
+    "caffeine": ">=0.2.0"
+  },
   "keywords": [
     "SASS",
     "CSS",
-    "CSS framework"
+    "CSS",
+    "framework"
   ],
   "license": "MIT",
   "ignore": [
