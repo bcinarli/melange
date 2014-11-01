@@ -3,7 +3,7 @@
 /** -------------------------------------------
     Number to Name Conversions
     ------------------------------------------- **/
-$numbers: one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen;
+$numbers: one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen !default;
 
-$ordinals: whole half third quarter fifth sixth seventh eighth ninth tenth eleventh twelfth;
-$ordinals-plural: whole half thirds quarters fifths sixths sevenths eighths ninths tenths elevenths twelfths;
+$ordinals: whole half third quarter fifth sixth seventh eighth ninth tenth eleventh twelfth !default;
+$ordinals-plural: whole half thirds quarters fifths sixths sevenths eighths ninths tenths elevenths twelfths !default;
