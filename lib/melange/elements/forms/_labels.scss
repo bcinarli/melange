@@ -20,13 +20,30 @@ label,
 .label {
     position: relative;
     display: inline-block;
+}
 
-    &.item-field {
+/**
+ * Item positions
+ * In most cases, 
+ * item-field is for showing label name and field in same line
+ * item-stacked is for showing label name and field in rows
+ * item-row is however, stacking the label wrappers together
+ */
+.item {
+    &-field {
         margin-right: 1em;
     }
-
-    &.item-stacked:not(:only-child) {
+    
+    &-stacked:not(:only-child){
         margin-bottom: 1em;
+    }
+    
+    &-row + .item-row {
+        margin-top: 1em;
+    }
+    
+    &-error {
+        color: $color-error;
     }
 }
 
