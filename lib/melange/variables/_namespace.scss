@@ -29,6 +29,8 @@ $column-name-plural: 'columns' !default;
  */
 // only used for similar class selector
 $action-button: '-action' !default;
+// for separating button wrappers
+$action-button-wrapper: '-actions' !default; 
 // other button classes
 $primary-button: 'primary-action' !default;
 $secondary-button: 'secondary-action' !default;

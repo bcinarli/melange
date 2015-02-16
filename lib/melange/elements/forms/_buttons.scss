@@ -39,8 +39,29 @@ button,
     }
 }
 
-[class$="#{$action-button}"] {
-    @extend %button;
+@if($support-for-ie8 == true){
+	[class*="#{$action-button}"]{
+    	@extend %button;
+	}
+	[class*="#{$action-button-wrapper}"] {
+		display: inherit;
+		cursor: inherit;
+		padding: inherit;
+		background: inherit;
+		font-weight: auto;
+		text-align: inherit;
+		
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration: inherit;
+		}
+	}
+}
+@else {
+	[class*="#{$action-button}"]:not([class*="#{$action-button-wrapper}"]) {
+		@extend %button;
+	}
 }
 
 .#{$primary-button} {
