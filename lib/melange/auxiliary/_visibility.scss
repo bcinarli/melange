@@ -3,8 +3,27 @@
 /** -------------------------------------------
     Visibility Related
     ------------------------------------------- **/
+/*
+ * Hide element
+ */
 .is-hidden,
 .hide // for fallback older versions
 {
     display: none;
+}
+
+/*
+ * Sometimes you do not hide the element
+ * `for-screenreader-only` the element will not hidden but
+ * visually invisible for accessibility 
+ */
+.for-screenreader-only {
+	position: absolute;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
 }
