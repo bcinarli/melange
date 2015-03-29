@@ -19,8 +19,6 @@
 	line-height: normal;
     color: $base-button-text-color;
 	
-	vertical-align: middle; // vertical center the text if any icon added to button
-	
     &:disabled,
     &.disabled {
         cursor: default;

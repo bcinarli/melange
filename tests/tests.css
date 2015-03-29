@@ -1780,8 +1780,7 @@ input[type="reset"], .button, [class*="-action"]:not([class*="-actions"]) {
   padding: 6px 15px;
   background: #c6c6c6;
   line-height: normal;
-  color: #222;
-  vertical-align: middle; }
+  color: #222; }
   button:disabled,
   input[type="submit"]:disabled,
   input[type="reset"]:disabled, .button:disabled, [class*="-action"]:disabled:not([class*="-actions"]), button.disabled,
