@@ -30,5 +30,5 @@ After copying the files,
 // After import Melange
 @import "<path-to-melange>/lib/melange";
 
-// Then you own Styles
+// Then your own Styles
 ```
