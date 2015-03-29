@@ -19,8 +19,8 @@ bower install melange
 ```
 
 After copying the files, 
-* Copy the `settings` folder to your projects assets folder.
-* The in your styles file
+* Copy the `settings` folder to your projects' assets folder.
+* Then in your styles file
 
 ```SCSS
 // First import the Settings file
