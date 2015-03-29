@@ -1,5 +1,4 @@
-Melange
-=======
+# Melange
 
 Melange is a powerful yet small CSS framework. It specialised for general usage thus most GUI related styles are
 missing. Simply sets basic styles to elements, allows scalability and applies coding standardization for different
@@ -21,9 +20,9 @@ bower install melange
 
 After copying the files, 
 * Copy the `settings` folder to your projects assets folder.
-* The in your `styles scss` file
+* The in your styles file
 
-```
+```SCSS
 // First import the Settings file
 @import "<path-to-settings>/settings";
 
