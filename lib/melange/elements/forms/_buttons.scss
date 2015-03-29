@@ -8,35 +8,50 @@
  * it is cross browser and meaningful. Also ".button" class is added in order to
  * get button-like elements
  */
-%button,
-button,
-.button {
-    -webkit-appearence: none;
+%button {
+    @include prefixer(apperance, none);
+	@include disable-text-select();
+	
     display: inline-block;
     cursor: pointer;
-    padding: .7*$base-spacing $base-spacing;
+	padding: ($base-input-spacing + 1px) (3 * $base-input-spacing);
     background: $base-button-color;
+	line-height: normal;
     color: $base-button-text-color;
-    font-weight: bold;
-    line-height: normal;
-    outline: none;
-    text-decoration: none;
-	text-align: center;
-    user-select: none;
-	vertical-align: middle;
-    white-space: normal;
-
-    &:hover,
-    &:focus,
-    &:active {
-        text-decoration: none;
-    }
-
+	
+	vertical-align: middle; // vertical center the text if any icon added to button
+	
     &:disabled,
     &.disabled {
         cursor: default;
-        background: opacify($base-button-color, .15);
+        background: lighten($base-button-color, 15);
     }
+}
+
+/**
+ * Native button elements
+ * Input button elements
+ */
+button,
+input[type="submit"],
+input[type="reset"] {
+	@extend %button;
+	border: transparent;
+}
+
+/**
+ * Anchor and other elements
+ */
+.button {
+	@extend %button;	
+	text-align: center;
+	
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	} 
 }
 
 @if($support-for-ie8 == true){
@@ -63,23 +78,28 @@ button,
 		@extend %button;
 	}
 }
-
-.#{$primary-button} {
+/** 
+ * Action Buttons
+ * specificity increased in order to overwrite [class*="#{$action-button}"]:not([class*="#{$action-button-wrapper}"])
+ * without using !important rule. By this, it can easily modified `.some-class .primary-action` selector
+ */
+.#{$primary-button}.#{$primary-button} {
     background-color: $base-primary-color;
     color: $base-primary-text-color;
 }
 
-.#{$secondary-button} {
+.#{$secondary-button}.#{$secondary-button} {
     background-color: $base-secondary-color;
     color: $base-secondary-text-color;
 }
 
-.#{$tertiary-button} {
+.#{$tertiary-button}.#{$tertiary-button} {
     background-color: $base-tertiary-color;
     color: $base-tertiary-text-color;
 }
 
-.#{$cancel-button} {
+.#{$cancel-button}.#{$cancel-button},
+input[type="reset"] {
     background-color: $base-cancel-color;
     color: $base-cancel-text-color;
 }

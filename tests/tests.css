@@ -1,2 +1,1936 @@
-/*! melange.css | @author Bilal Cinarli | melange.io *//*! normalize.css v3.0.1 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}html{box-sizing:border-box}*,*:after,*:before{box-sizing:inherit}hr,input[type="search"]{box-sizing:inherit}html,body{width:100%;height:100%;margin:0;padding:0}h1,h2,h3,h4,h5,h6,p,ul,ol,li,table,th,td{margin-top:0;padding:0}.group:after,.row:after,.media:after{content:"";display:table;clear:both}fieldset,.form-elements{margin:0;padding:0;border:none;background:none;list-style:none}.column{float:left}.move-to-start,[dir="rtl"] .move-to-end{float:left}.move-to-end,[dir="rtl"] .move-to-start{float:right}.align-start{text-align:start}.align-end{text-align:end}.one-whole{width:100%}.one-half{width:50%}.one-thirds,.one-third{width:33.3333333333%}.two-thirds{width:66.6666666667%}.one-quarters,.one-quarter{width:25%}.two-quarters{width:50%}.three-quarters{width:75%}.one-fifths,.one-fifth{width:20%}.two-fifths{width:40%}.three-fifths{width:60%}.four-fifths{width:80%}.one-eighths,.one-eighth{width:12.5%}.two-eighths{width:25%}.three-eighths{width:37.5%}.four-eighths{width:50%}.five-eighths{width:62.5%}.six-eighths{width:75%}.seven-eighths{width:87.5%}.one-tenths,.one-tenth{width:10%}.two-tenths{width:20%}.three-tenths{width:30%}.four-tenths{width:40%}.five-tenths{width:50%}.six-tenths{width:60%}.seven-tenths{width:70%}.eight-tenths{width:80%}.nine-tenths{width:90%}.one-twelfths,.one-twelfth{width:8.3333333333%}.two-twelfths{width:16.6666666667%}.three-twelfths{width:25%}.four-twelfths{width:33.3333333333%}.five-twelfths{width:41.6666666667%}.six-twelfths{width:50%}.seven-twelfths{width:58.3333333333%}.eight-twelfths{width:66.6666666667%}.nine-twelfths{width:75%}.ten-twelfths{width:83.3333333333%}.eleven-twelfths{width:91.6666666667%}.pull{margin-left:-20px}.push{margin-right:-20px}.pull-push{margin-left:-20px;margin-right:-20px}[class*="-column"]{position:relative;float:left;padding:0 20px}[class*="-column"].column-parent{padding:0}[class*="column-reverse"]{float:right}.one-column,.one-columns{width:5.5555555556%}.two-column,.two-columns{width:11.1111111111%}.three-column,.three-columns{width:16.6666666667%}.four-column,.four-columns{width:22.2222222222%}.five-column,.five-columns{width:27.7777777778%}.six-column,.six-columns{width:33.3333333333%}.seven-column,.seven-columns{width:38.8888888889%}.eight-column,.eight-columns{width:44.4444444444%}.nine-column,.nine-columns{width:50%}.ten-column,.ten-columns{width:55.5555555556%}.eleven-column,.eleven-columns{width:61.1111111111%}.twelve-column,.twelve-columns{width:66.6666666667%}.thirteen-column,.thirteen-columns{width:72.2222222222%}.fourteen-column,.fourteen-columns{width:77.7777777778%}.fifteen-column,.fifteen-columns{width:83.3333333333%}.sixteen-column,.sixteen-columns{width:88.8888888889%}.seventeen-column,.seventeen-columns{width:94.4444444444%}.eighteen-column,.eighteen-columns{width:100%}.offset-by-one{margin-left:5.5555555556%}.offset-by-two{margin-left:11.1111111111%}.offset-by-three{margin-left:16.6666666667%}.offset-by-four{margin-left:22.2222222222%}.offset-by-five{margin-left:27.7777777778%}.offset-by-six{margin-left:33.3333333333%}.offset-by-seven{margin-left:38.8888888889%}.offset-by-eight{margin-left:44.4444444444%}.offset-by-nine{margin-left:50%}.offset-by-ten{margin-left:55.5555555556%}.offset-by-eleven{margin-left:61.1111111111%}.offset-by-twelve{margin-left:66.6666666667%}.offset-by-thirteen{margin-left:72.2222222222%}.offset-by-fourteen{margin-left:77.7777777778%}.offset-by-fifteen{margin-left:83.3333333333%}.offset-by-sixteen{margin-left:88.8888888889%}.offset-by-seventeen{margin-left:94.4444444444%}html{font-size:16px}body{font:16px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#222}.form-elements li{position:relative;margin-bottom:1em}legend{display:block;width:100%;margin-bottom:1em}label,.label{position:relative;display:inline-block}.item-field{margin-right:1em}.item-stacked:not(:only-child){margin-bottom:1em}.item-row+.item-row{margin-top:1em}.item-error{color:#e87352}.item-label,.field-label{position:relative;display:inline-block;cursor:pointer}.item-stacked .item-label,.item-stacked .field-label{display:block}.required .item-label:before,.required .field-label:before{content:"*";position:absolute;left:-10px}.field-help{font-size:.8em;font-style:italic}input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"],textarea,.text-field{-webkit-appearance:none;outline:0;padding:5px;border:1px solid #c6c6c6;color:inherit;font-size:1rem;font-weight:normal}input[type="text"]:focus,input[type="text"]:active,input[type="password"]:focus,input[type="password"]:active,input[type="datetime"]:focus,input[type="datetime"]:active,input[type="datetime-local"]:focus,input[type="datetime-local"]:active,input[type="date"]:focus,input[type="date"]:active,input[type="month"]:focus,input[type="month"]:active,input[type="time"]:focus,input[type="time"]:active,input[type="week"]:focus,input[type="week"]:active,input[type="number"]:focus,input[type="number"]:active,input[type="email"]:focus,input[type="email"]:active,input[type="url"]:focus,input[type="url"]:active,input[type="search"]:focus,input[type="search"]:active,input[type="tel"]:focus,input[type="tel"]:active,input[type="color"]:focus,input[type="color"]:active,textarea:focus,textarea:active,.text-field:focus,.text-field:active{border-color:#a6a6a6;background:#fff}input[type="text"][readonly],input[type="text"].readonly,input[type="password"][readonly],input[type="password"].readonly,input[type="datetime"][readonly],input[type="datetime"].readonly,input[type="datetime-local"][readonly],input[type="datetime-local"].readonly,input[type="date"][readonly],input[type="date"].readonly,input[type="month"][readonly],input[type="month"].readonly,input[type="time"][readonly],input[type="time"].readonly,input[type="week"][readonly],input[type="week"].readonly,input[type="number"][readonly],input[type="number"].readonly,input[type="email"][readonly],input[type="email"].readonly,input[type="url"][readonly],input[type="url"].readonly,input[type="search"][readonly],input[type="search"].readonly,input[type="tel"][readonly],input[type="tel"].readonly,input[type="color"][readonly],input[type="color"].readonly,textarea[readonly],textarea.readonly,.text-field[readonly],.text-field.readonly{cursor:default;border-color:#c6c6c6;background-color:#f9f9f9}input[type="text"].item-error,input[type="password"].item-error,input[type="datetime"].item-error,input[type="datetime-local"].item-error,input[type="date"].item-error,input[type="month"].item-error,input[type="time"].item-error,input[type="week"].item-error,input[type="number"].item-error,input[type="email"].item-error,input[type="url"].item-error,input[type="search"].item-error,input[type="tel"].item-error,input[type="color"].item-error,textarea.item-error,.text-field.item-error{border-color:#e87352}input[type="checkbox"],input[type="radio"]{vertical-align:middle}input[type="checkbox"]+.field-label,input[type="checkbox"]+.item-label,input[type="radio"]+.field-label,input[type="radio"]+.item-label{font-weight:normal;margin-left:.25em;vertical-align:middle}textarea{min-height:3em;resize:vertical}[class*="-action"],button,.button{-webkit-appearence:none;display:inline-block;cursor:pointer;padding:0.7em 1em;background:#f9f9f9;color:#222;font-weight:bold;line-height:normal;outline:none;text-decoration:none;text-align:center;user-select:none;vertical-align:middle;white-space:normal}[class*="-action"]:hover,[class*="-action"]:focus,[class*="-action"]:active,button:hover,button:focus,button:active,.button:hover,.button:focus,.button:active{text-decoration:none}[class*="-action"]:disabled,.disabled[class*="-action"],button:disabled,button.disabled,.button:disabled,.button.disabled{cursor:default;background:#f9f9f9}[class*="-actions"]{display:inherit;cursor:inherit;padding:inherit;background:inherit;font-weight:auto;text-align:inherit}[class*="-actions"]:hover,[class*="-actions"]:focus,[class*="-actions"]:active{text-decoration:inherit}.primary-action{background-color:#009bdc;color:#fff}.secondary-action{background-color:#67af00;color:#fff}.tertiary-action{background-color:#ffa900;color:#fff}.cancel-action{background-color:#e87352;color:#fff}table{width:100%}tfoot td:only-child{text-align:right}th,td{padding:0.5em;text-align:left}a{display:inline-block;padding:2px}nav a{text-decoration:none}nav ul{margin:0;padding:0;list-style:none}ol,ul{list-style-position:outside;padding-left:20px}dl{padding-left:20px}dl dt{font-weight:bold}.media-visual{display:block;float:left;margin-right:1em}.media-text+.media-visual{float:right;margin-right:auto;margin-left:1em}
+@charset "UTF-8";
+/**
+  * @author Bilal Cinarli
+  * Melange Tests
+  */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Caffeine 
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    System Functions for internal usage
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Generic Functions
+    ------------------------------------------- **/
+/**
+  * Remove units
+  */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Text Related Functions
+    ------------------------------------------- **/
+/**
+  * Rem to PX
+  */
+/**
+ * REM converter
+ * in style's config, we hope to have a base-font-size variable,
+ * if not, we define it according to standart html font-size
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    String Manipulation Functions
+    ------------------------------------------- **/
+/**
+  * String Replacement
+  * Mimics the PHP's str_replace function
+  * @param {string} $search   The value being searched for, otherwise known as the needle
+  * @param {string} $replace  The replacement value that replaces found search values
+  * @param {string} $subject  The string being searched and replaced on, otherwise known as the haystack.
+  */
+/**
+  * Case insensitive String Replacement
+  * Mimics the PHP's str_ireplace function
+  * @param {string} $search   The value being searched for, otherwise known as the needle
+  * @param {string} $replace  The replacement value that replaces found search values
+  * @param {string} $subject  The string being searched and replaced on, otherwise known as the haystack.
+  */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Mixins for Internal Melange Usage
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Generic Mixins
+    ------------------------------------------- **/
+/**
+ * Adds prefixed version of a property according to listed vendors
+ */
+/**
+ * Adds prefixed version of values in a property
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Text Related Mixins
+    ------------------------------------------- **/
+/**
+ * Fontface
+ */
+/**
+ * Font-Size callback
+ */
+/**
+ * Disable Select
+ * It is useful for mobil applications
+ * Prevents text selection when swipe or double click
+ * http://caniuse.com/#search=user-select
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
+ * Formal syntax: none | text | all | element
+ * Current spec, all vendors need prefixing
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Size Related Mixins
+    ------------------------------------------- **/
+/**
+ * Square or desired width-height for an element
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    CSS3 Related Mixins
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Background Gradient Mixins
+    ------------------------------------------- **/
+/**
+ * Simple Linear gradient
+ * Gets the linear gradient content as a parameter and outputs the prefixed version.
+ * For old browsers do not forget to add fallback color/image before mixin
+ * Uses new linear gradient version. Not supporting Safari 5 or older and IE9 and older versions
+ *
+ * @param string $content
+ */
+/**
+ * Simple Radial gradient
+ * Gets the radial gradient content as a parameter and outputs the prefixed version.
+ * For old browsers do not forget to add fallback color/image before mixin
+ * Uses new linear gradient version. Not supporting Safari 5 or older and IE9 and older versions
+ *
+ * @param $content
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Box Shadow
+    ------------------------------------------- **/
+/**
+ * Simple Box shadow
+ *
+ * @param $content: box-shadow content
+ * http://caniuse.com/#search=box-shadow 
+ * current spec, only Android browser 2.3 need -webkit prefix
+ * You can use standart CSS box shadow definition
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Transition Related Mixins
+    ------------------------------------------- **/
+/**
+ * CSS Transition
+ *
+ * Outputs CSS3 transition code with defined prefixes
+ * http://caniuse.com/#search=transition
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+ * Formal syntax: [ none | <single-transition-property> ] || <time> || <timing-function> || <time>
+ * current spec, older Android browsers and Safari 5.1 need -webkit
+ */
+/**
+ * CSS Transition Delay
+ * Outputs CSS3 transition-delay code with defined pferixes
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay
+ * Formal syntax: <time>#
+ */
+/**
+ * CSS Transition Duration
+ * Outputs CSS3 transition-duration code with defined pferixes
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration
+ * Formal syntax: <time>#
+ */
+/**
+ * CSS Transition Property
+ * Outputs CSS3 transition-property code with defined pferixes
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property
+ * Formal syntax: none | <single-transition-property>#  [ ‘,’ <single-transition-property># ]*
+ */
+/**
+ * CSS Transition Timing
+ * Outputs CSS3 transition-timing-function code with defined pferixes
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function
+ * Formal syntax: <timing-function>#
+ */
+/**
+ * App Transition
+ *
+ * General transition definition for app
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Transform Related Mixins
+    ------------------------------------------- **/
+/**
+ * CSS Transform
+ *
+ * Outputs CSS3 tranform code with defined prefixes
+ * http://caniuse.com/#search=transform
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+ * Formal syntax: none | <transform-function>+
+ * For transform functions see: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function
+ * current spec, Safari, Android browser and IE9 need vendor prefix
+ */
+/**
+ * CSS Transform Origin
+ *
+ * Outputs CSS3 tranform-origin code with defined prefixes
+ * http://caniuse.com/#search=transform
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+ * Formal syntax: [ <percentage> | <length> | left | center | right | top | bottom] | [ [ <percentage> | <length> | left | center | right ] && [ <percentage> | <length> | top | center | bottom ] ] <length>?
+ * current spec, Safari, Android browser and IE9 need vendor prefix
+ */
+/**
+ * CSS Transform Style
+ *
+ * Outputs CSS3 tranform-style code with defined prefixes
+ * http://caniuse.com/#search=transform
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style
+ * Formal syntax: flat | preserve-3d | inherit
+ * current spec, IE is not supported, webkit browsers need prefixing
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Animation Related Mixins
+    ------------------------------------------- **/
+/**
+ * CSS Animation
+ *
+ * Outputs CSS3 animation code with defined prefixes
+ * http://caniuse.com/#search=css3%20animation
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+ * Formal syntax: <single-animation-name> || <time> || <timing-function> || <time> || <single-animation-iteration-count> || <single-animation-direction> || <single-animation-fill-mode> || <single-animation-play-state>
+ * current spec, webkit browsers need prefixing
+ */
+/**
+ * CSS Animation Delay
+ *
+ * Outputs CSS3 animation-delay code with defined prefixes
+ * http://caniuse.com/#search=css3%20animation
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay
+ * Formal syntax: <time>#
+ * current spec, webkit browsers need prefixing
+ */
+/**
+ * CSS Animation Direction
+ *
+ * Outputs CSS3 animation-direction code with defined prefixes
+ * http://caniuse.com/#search=css3%20animation
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction
+ * Formal syntax: <single-animation-direction>#
+ * current spec, webkit browsers need prefixing
+ */
+/**
+ * CSS Animation Duration
+ *
+ * Outputs CSS3 animation-duration code with defined prefixes
+ * http://caniuse.com/#search=css3%20animation
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration
+ * Formal syntax: <time>#
+ * current spec, webkit browsers need prefixing
+ */
+/**
+ * CSS Animation Fill Mode
+ *
+ * Outputs CSS3 animation-fill-mode code with defined prefixes
+ * http://caniuse.com/#search=css3%20animation
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode
+ * Formal syntax: <single-animation-fill-mode>#
+ * current spec, webkit browsers need prefixing
+ */
+/**
+ * CSS Animation Iteration Count
+ *
+ * Outputs CSS3 animation-iteration-count code with defined prefixes
+ * http://caniuse.com/#search=css3%20animation
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count
+ * Formal syntax: <single-animation-iteration-count>#
+ * current spec, webkit browsers need prefixing
+ */
+/**
+ * CSS Animation Name
+ *
+ * Outputs CSS3 animation-name code with defined prefixes
+ * http://caniuse.com/#search=css3%20animation
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name
+ * Formal syntax: <single-animation-name>#
+ * current spec, webkit browsers need prefixing
+ */
+/**
+ * CSS Animation Play State
+ *
+ * Outputs CSS3 animation-play-state code with defined prefixes
+ * http://caniuse.com/#search=css3%20animation
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state
+ * Formal syntax: <single-animation-play-state>#
+ * current spec, webkit browsers need prefixing
+ */
+/**
+ * CSS Animation Timing Function
+ *
+ * Outputs CSS3 animation-timing-function code with defined prefixes
+ * http://caniuse.com/#search=css3%20animation
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+ * Formal syntax: <single-animation-timing-function>#
+ * current spec, webkit browsers need prefixing
+ */
+/**
+ * CSS Keyframes
+ *
+ * Outputs CSS3 keyframes code with defined prefixes
+ * http://caniuse.com/#search=keyframes
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+ * @keyframes <identifier> {
+ * 	[ [ from | to | <percentage> ] [, from | to | <percentage> ]* block ]*
+ * }
+ * current spec, webkit browsers need prefixing
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Columns Related Mixins
+    ------------------------------------------- **/
+/**
+ * CSS Columns
+ *
+ * Outputs CSS3 Columns with defined prefixes
+ * http://caniuse.com/#search=column
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/columns
+ * Formal syntax: <'column-width'> || <'column-count'>
+ * current spec, except IE, all browsers need vendor prefix either -moz or -webkit
+ */
+/**
+ * CSS Column Count
+ *
+ * Outputs CSS3 Column Count
+ * http://caniuse.com/#search=column
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/column-count
+ * Formal syntax: <number> | auto
+ * current spec, except IE, all browsers need vendor prefix either -moz or -webkit
+ */
+/**
+ * CSS Column Width
+ *
+ * Outputs CSS3 Column Width
+ * http://caniuse.com/#search=column
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/column-width
+ * Formal syntax: <length> | auto
+ * current spec, except IE, all browsers need vendor prefix either -moz or -webkit
+ */
+/**
+ * CSS Column Gap
+ *
+ * Outputs CSS3 Column Gap
+ * http://caniuse.com/#search=column
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap
+ * Formal syntax: <length> | normal
+ * current spec, except IE, all browsers need vendor prefix either -moz or -webkit
+ */
+/**
+ * CSS Column Rule
+ *
+ * Outputs CSS3 Column Rule, shorthand definition for column rule styles
+ * http://caniuse.com/#search=column
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule
+ * Formal syntax: <'column-rule-width'> || <'column-rule-style'> || <'column-rule-color'>
+ * current spec, except IE, all browsers need vendor prefix either -moz or -webkit
+ */
+/**
+ * CSS Column Rule Color
+ *
+ * Outputs CSS3 Column Rule Color
+ * http://caniuse.com/#search=column
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-color
+ * Formal syntax: <color>
+ * current spec, except IE, all browsers need vendor prefix either -moz or -webkit
+ */
+/**
+ * CSS Column Rule Style
+ *
+ * Outputs CSS3 Column Rule Style
+ * http://caniuse.com/#search=column
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-style
+ * Formal syntax: <style>
+ * current spec, except IE, all browsers need vendor prefix either -moz or -webkit
+ */
+/**
+ * CSS Column Rule Width
+ *
+ * Outputs CSS3 Column Rule Width
+ * http://caniuse.com/#search=column
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-width
+ * Formal syntax: <br-width>
+ * Available values: thin || medium || thick || number px || number em
+ * current spec, except IE, all browsers need vendor prefix either -moz or -webkit
+ */
+/**
+ * CSS Column Span
+ *
+ * Outputs CSS3 Column Span
+ * http://caniuse.com/#search=column
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/column-span
+ * Formal syntax: none | all
+ * Currently, except firefox, all vendors supporting this feature. Webkit browsers need prefix
+ */
+/**
+ * CSS Column Fill
+ *
+ * Outputs CSS3 Column Fill
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/column-fill
+ * Formal syntax: auto | balance
+ * Currently only firefox supports
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Media Query Mixins
+    ------------------------------------------- **/
+/**
+ * Retina Image
+ */
+/**
+ * Retina
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Arrow
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Placeholder
+    ------------------------------------------- **/
+/**
+  * Styles input elements' placeholder. 
+  * @param $self: true, if it is true, styles applied to class itself
+  *			if false, styles applied to the child elements
+  */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Positions
+    ------------------------------------------- **/
+/**
+  * Center
+  * Applied to absolute positined elements. 
+  * Element is centered both vertically and horizontally
+  */
+/**
+  * Vertical Center
+  */
+/**
+ * Horizontal Center
+ * Centers the element horizontally 
+ * Uses margin: 0 auto; when $type defined as "static"
+ * By default it uses the 
+ */
+/* @author Bilal Cinarli */
+/**
+ * System wide settings
+ *
+ * All the imported values are set to "null" if they have a default value.
+ * So if you want to use them as default, do not change to null value.
+ */
+/** -------------------------------------------
+    Settings for default overwrites and
+    GUI related variables
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    System supports
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Default class/definition names
+    ------------------------------------------- **/
+/**
+ * Name space prefix
+ * Adds a defined namespace prefix to generated class names
+ */
+/**
+ * Class names for grid
+ * @default $row-name: 'row'
+ * @default $column-name: 'column'
+ * @default $column-name-plural: 'columns'
+ */
+/**
+ * Button names for action
+ *
+ * @default $action-button: '-action'; // only used for similar class selector
+ * @default $primary-button: 'primary-action';
+ * @default $secondary-button: 'secondary-action';
+ * @default $tertiary-button: 'tertiary-action';
+ * @default $cancel-button: 'cancel-action';
+ */
+/**
+ * Folders
+ * Not actually a namespace but folder names also have different preferences
+ * @default $images: '../images/'; relative to styles folder
+ * @default $retina-suffix: '@2x'
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Animation Related Variables
+    ------------------------------------------- **/
+/**
+ * Duration
+ * 
+ * Duration time for transition animations
+ * @default .4s
+ */
+/**
+ * Easing
+ *
+ * Easing style
+ * @default ease
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Size Definitions
+    ------------------------------------------- **/
+/**
+ * Spacing in element
+ *
+ * Sets the padding sizes for an element
+ * @default $base-spacing 1em
+ * @default $base-input-spacing 5px
+ */
+/**
+ * Grid gutter and columns
+ *
+ * Defines the grid gutter size and column count in a row
+ * Grid columns floated by default. But it is optional whether float or not
+ * for percentage widths.
+ * @default $base-gutter: 20px
+ * @default $base-grid-columns: 18
+ * @default $base-float-widths: true
+ */
+/**
+ * Border Widths
+ *
+ * Applied border with for input fields and table borders
+ * @default $base-border-width: 1px;
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Fonts
+    ------------------------------------------- **/
+/**
+ * Global font definitions
+ * @default $base-font-size: 16px
+ * @default $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+ * @default $base-line-height: 1.5
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Colors
+    ------------------------------------------- **/
+/**
+ * Named Colors
+ *
+ * Some named colors for inheriting colors over different variables
+ * @default $color-primary    : #009bdc;
+ * @default $color-secondary  : #67af00;
+ * @default $color-tertiary   : #ffa900;
+ * @default $color-cancel     : #e87352;
+ * @default $color-error      : $color-cancel;
+ * @default $color-text       : #222;
+ * @default $color-light-gray : #e5e5e5;
+ * @default $color-gray       : #c6c6c6;
+ * @default $color-dark-gray  : #a6a6a6;
+ * @default $color-white      : #fff;
+ * @default $color-black      : #000;
+ */
+/**
+ * Simple colors for general styling
+ * @default $base-color: #222
+ */
+/**
+ * Border Colors
+ *
+ * Colors applied to border in focus, disabled, readonly and stationary state
+ * @default $base-border-color: #c6c6c6;
+ * @default $base-border-highlight: #a6a6a6;
+ * @default $base-border-disabled: #e9e9e9;
+ * @default $base-border-readonly: #c6c6c6;
+ */
+/**
+ * Field Background Colors
+ *
+ * Color applied to field background in focus, disabled, readonly and stationary state
+ * @default $base-field-background: #fff;
+ * @default $base-field-highlight: #fff;
+ * @default $base-field-disabled: #c6c6c6;
+ * @default $base-field-readonly: #e5e5e5;
+ */
+/**
+ * Button colors
+ */
+/**
+ * Default Button
+ *
+ * Unstyled, normal button
+ * @default $base-button-color: #e5e5e5;
+ * @default $base-button-text-color: #222;
+ */
+/**
+ * Primary Action Button
+ *
+ * Maybe used for call-to-action button or/and save/submit buttons in forms
+ * @default $base-primary-color: #009bdc;
+ * @default $base-primary-text-color: #fff;
+ */
+/**
+ * Secondary Action Button
+ *
+ * Useful for indication secondary action in a form near the primary action button
+ * @default $base-secondary-color: #67af00;
+ * @default $base-secondary-text-color: #fff;
+ */
+/**
+ * Tertiary Action Button
+ *
+ * Useful for actions whether they are not fit for primary or secondary
+ * @default $base-tertiary-color: #ffa900;
+ * @default $base-tertiary-text-color: #fff;
+ */
+/**
+ * Cancel Action Button
+ *
+ * Simply used for cancel button for a form or call-to-action, confirmation etc.
+ * @default $base-cancel-color: #e87352;
+ * @default $base-cancel-text-color: #fff;
+ */
+/*! melange.css | @author Bilal Cinarli | melange.io */
+/**
+ * Loads the main containers. Each folder has _*.scss container file with the same name.
+ * This container files imports all other files in the same folder.
+ */
+/** -------------------------------------------
+    General Settings
+    ------------------------------------------- **/
+/** -------------------------------------------
+    Internal Variables
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Variables Container
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    System supports
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Default class/definition names
+    ------------------------------------------- **/
+/**
+ * Name space prefix
+ * Adds a defined namespace prefix to generated class names
+ */
+/**
+ *  Text field lists
+ */
+/**
+ * Class names for grid
+ */
+/**
+ * Button names for action
+ */
+/**
+ * Folders
+ * Not actually a namespace but folder names also have different preferences
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Number to Name Conversions
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Animation Related Variables
+    ------------------------------------------- **/
+/**
+ * Duration
+ *
+ * Duration time for transition animations
+ */
+/**
+ * Easing
+ *
+ * Easing style
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Default size definitions
+    ------------------------------------------- **/
+/**
+ * Spacing in element
+ * Sets the padding sizes for an element
+ */
+/**
+ * Grid gutter and columns
+ * Defines the grid gutter size and column count in a row
+ * Non-grid columns are not floated by default. But it is optional whether float or not
+ * for percentage widths.
+ */
+/**
+ * Border Widths
+ *
+ * Applied border with for input fields and table borders
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Fonts
+    ------------------------------------------- **/
+/**
+ * Default font definitions
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Colors
+    ------------------------------------------- **/
+/**
+ * Named Colors
+ *
+ * Some named colors for inheriting colors over different variables
+ */
+/**
+ * Simple colors for general styling
+ */
+/**
+ * Border Colors
+ *
+ * Colors applied to border in focus, disabled, readonly and stationary state
+ * @default $base-border-color: #ccc;
+ */
+/**
+ * Field Background Colors
+ *
+ * Color applied to field background in focus, disabled, readonly and stationary state
+ */
+/**
+ * Button colors
+ */
+/**
+ * Default Button
+ *
+ * Unstyled, normal button
+ */
+/**
+ * Primary Action Button
+ *
+ * Maybe used for call-to-action button or/and save/submit buttons in forms
+ */
+/**
+ * Secondary Action Button
+ *
+ * Useful for indication secondary action in a form near the primary action button
+ */
+/**
+ * Tertiary Action Button
+ *
+ * Useful for actions whether they are not fit for primary or secondary
+ */
+/**
+ * Cancel Action Button
+ *
+ * Simply used for cancel button for a form or call-to-action, confirmation etc.
+ */
+/** -------------------------------------------
+    Melange Internal Methods
+    ------------------------------------------- **/
+/** -------------------------------------------
+    Global Styles
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Global Styles Container
+    ------------------------------------------- **/
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Generic Styles
+    ------------------------------------------- **/
+/**
+ * More proper width calculation and better grid,
+ * all elements' box-sizing set to border-box
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:after, *:before {
+  box-sizing: inherit; }
+
+/**
+ * Overwrite normalize.css's box-sizing definitions
+ */
+hr,
+input[type="search"] {
+  box-sizing: inherit; }
+
+/**
+ * Set html and body sizes to 100% for better wrapping
+ * Remove margins and padding to use all viewport
+ */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Remove top margin and padding from certain elements
+ * generally we never use top margin anyway
+ */
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol, li,
+table, th, td {
+  margin-top: 0;
+  padding: 0; }
+
+/**
+ * And good-ol friend clearfix
+ * For a meaningful name our clearfix class named as group
+ */
+.group:after, .row:after, .media:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* @author Bilal Cinarli */
+/**
+ * Not real functions of mixins but set of definitions for resetting or reformatting an element
+ */
+/** -------------------------------------------
+    Helper Definitions
+    ------------------------------------------- **/
+/**
+ * Hard reset for an element
+ */
+fieldset, .form-elements {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  list-style: none; }
+
+/**
+ * Vertical Center
+ */
+/**
+ * Horizontal Center
+ */
+/**
+ * Center Alignment
+ */
+/**
+ * Floats
+ */
+.column {
+  float: left; }
+
+/* @author Bilal Cinarli */
+/**
+ * Position related definition
+ */
+/** -------------------------------------------
+    Positions
+    ------------------------------------------- **/
+/**
+ * Floats
+ */
+.move-to-start,
+[dir="rtl"] .move-to-end {
+  float: left; }
+
+.move-to-end,
+[dir="rtl"] .move-to-start {
+  float: right; }
+
+/**
+ * Aligns
+ * start and end values for text-aligns are direction safe.
+ * no need to additional definition for rtl/ltr differences.
+ */
+.align-start {
+  text-align: start; }
+
+.align-end {
+  text-align: end; }
+
+/** -------------------------------------------
+    Layout Definitions
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Layouts Container
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Widths for General Usage
+    ------------------------------------------- **/
+/**
+ * Mixin for width calculations
+ *
+ * @param $column: defines how many chunks in one row and calculates the chunk width
+ * @param $namespace prefix for classes in order to use different names for different parts
+ *
+ * @depends $numbers: number-to-name conversion list for human readable class names
+ * @depends $ordinals: defines the human reader total chunks
+ */
+/**
+ * Whole
+ */
+.one-whole {
+  width: 100%; }
+
+/**
+ * Half
+ */
+.one-half {
+  width: 50%; }
+
+/**
+ * Thirds
+ */
+.one-thirds, .one-third {
+  width: 33.3333333333%; }
+
+.two-thirds {
+  width: 66.6666666667%; }
+
+/**
+ * Quarters
+ */
+.one-quarters, .one-quarter {
+  width: 25%; }
+
+.two-quarters {
+  width: 50%; }
+
+.three-quarters {
+  width: 75%; }
+
+/**
+ * Fifths
+ */
+.one-fifths, .one-fifth {
+  width: 20%; }
+
+.two-fifths {
+  width: 40%; }
+
+.three-fifths {
+  width: 60%; }
+
+.four-fifths {
+  width: 80%; }
+
+/**
+ * Eights
+ */
+.one-eighths, .one-eighth {
+  width: 12.5%; }
+
+.two-eighths {
+  width: 25%; }
+
+.three-eighths {
+  width: 37.5%; }
+
+.four-eighths {
+  width: 50%; }
+
+.five-eighths {
+  width: 62.5%; }
+
+.six-eighths {
+  width: 75%; }
+
+.seven-eighths {
+  width: 87.5%; }
+
+/**
+ * Tenths
+ */
+.one-tenths, .one-tenth {
+  width: 10%; }
+
+.two-tenths {
+  width: 20%; }
+
+.three-tenths {
+  width: 30%; }
+
+.four-tenths {
+  width: 40%; }
+
+.five-tenths {
+  width: 50%; }
+
+.six-tenths {
+  width: 60%; }
+
+.seven-tenths {
+  width: 70%; }
+
+.eight-tenths {
+  width: 80%; }
+
+.nine-tenths {
+  width: 90%; }
+
+/**
+ * Twelfths
+ */
+.one-twelfths, .one-twelfth {
+  width: 8.3333333333%; }
+
+.two-twelfths {
+  width: 16.6666666667%; }
+
+.three-twelfths {
+  width: 25%; }
+
+.four-twelfths {
+  width: 33.3333333333%; }
+
+.five-twelfths {
+  width: 41.6666666667%; }
+
+.six-twelfths {
+  width: 50%; }
+
+.seven-twelfths {
+  width: 58.3333333333%; }
+
+.eight-twelfths {
+  width: 66.6666666667%; }
+
+.nine-twelfths {
+  width: 75%; }
+
+.ten-twelfths {
+  width: 83.3333333333%; }
+
+.eleven-twelfths {
+  width: 91.6666666667%; }
+
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Grid Columns
+    ------------------------------------------- **/
+/**
+ * Mixin for grid columns
+ *
+ * Apart from our generic widths, columns have gutter for spacing and they are floated by default.
+ */
+/**
+ * Offset settings for grid columns
+ *
+ * When you need much larger spacing between grid columns, you can offset a column by one or more column widths
+ */
+/**
+ * Row
+ * Row encapsulation for columns
+ */
+.pull {
+  margin-left: -20px; }
+
+.push {
+  margin-right: -20px; }
+
+.pull-push {
+  margin-left: -20px;
+  margin-right: -20px; }
+
+/**
+ * Columns
+ * Better controlling the width, gutter defined as right & left padding
+ */
+[class*="-column"] {
+  position: relative;
+  float: left;
+  padding: 0 20px; }
+  [class*="-column"].column-parent {
+    padding: 0; }
+
+[class*="column-reverse"] {
+  float: right; }
+
+/**
+ * Grid Columns
+ * Sets the grid columns according to column number defined in $base-grid-columns
+ * @see melange/variables/_sizes.scss
+ * @see settings/_sizes.scss
+ */
+.one-column,
+.one-columns {
+  width: 5.5555555556%; }
+
+.two-column,
+.two-columns {
+  width: 11.1111111111%; }
+
+.three-column,
+.three-columns {
+  width: 16.6666666667%; }
+
+.four-column,
+.four-columns {
+  width: 22.2222222222%; }
+
+.five-column,
+.five-columns {
+  width: 27.7777777778%; }
+
+.six-column,
+.six-columns {
+  width: 33.3333333333%; }
+
+.seven-column,
+.seven-columns {
+  width: 38.8888888889%; }
+
+.eight-column,
+.eight-columns {
+  width: 44.4444444444%; }
+
+.nine-column,
+.nine-columns {
+  width: 50%; }
+
+.ten-column,
+.ten-columns {
+  width: 55.5555555556%; }
+
+.eleven-column,
+.eleven-columns {
+  width: 61.1111111111%; }
+
+.twelve-column,
+.twelve-columns {
+  width: 66.6666666667%; }
+
+.thirteen-column,
+.thirteen-columns {
+  width: 72.2222222222%; }
+
+.fourteen-column,
+.fourteen-columns {
+  width: 77.7777777778%; }
+
+.fifteen-column,
+.fifteen-columns {
+  width: 83.3333333333%; }
+
+.sixteen-column,
+.sixteen-columns {
+  width: 88.8888888889%; }
+
+.seventeen-column,
+.seventeen-columns {
+  width: 94.4444444444%; }
+
+.eighteen-column,
+.eighteen-columns {
+  width: 100%; }
+
+/**
+ * Offsets
+ * Sets the offsets classes according to column number defined in $base-grid-columns
+ */
+.offset-by-one {
+  margin-left: 5.5555555556%; }
+
+.offset-by-two {
+  margin-left: 11.1111111111%; }
+
+.offset-by-three {
+  margin-left: 16.6666666667%; }
+
+.offset-by-four {
+  margin-left: 22.2222222222%; }
+
+.offset-by-five {
+  margin-left: 27.7777777778%; }
+
+.offset-by-six {
+  margin-left: 33.3333333333%; }
+
+.offset-by-seven {
+  margin-left: 38.8888888889%; }
+
+.offset-by-eight {
+  margin-left: 44.4444444444%; }
+
+.offset-by-nine {
+  margin-left: 50%; }
+
+.offset-by-ten {
+  margin-left: 55.5555555556%; }
+
+.offset-by-eleven {
+  margin-left: 61.1111111111%; }
+
+.offset-by-twelve {
+  margin-left: 66.6666666667%; }
+
+.offset-by-thirteen {
+  margin-left: 72.2222222222%; }
+
+.offset-by-fourteen {
+  margin-left: 77.7777777778%; }
+
+.offset-by-fifteen {
+  margin-left: 83.3333333333%; }
+
+.offset-by-sixteen {
+  margin-left: 88.8888888889%; }
+
+.offset-by-seventeen {
+  margin-left: 94.4444444444%; }
+
+/** -------------------------------------------
+    Base Element Styles
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Elements Container
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Text Styles
+    ------------------------------------------- **/
+/**
+ * Body base font and color definitions
+ */
+html {
+  font-size: 16px; }
+
+body {
+  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
+
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Form Elements Container
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Field Wrappers
+    ------------------------------------------- **/
+/**
+ * Fieldset for field wrappers
+ */
+/**
+ * Form Elements Holder
+ * A list or a div for group form elements
+ */
+.form-elements {
+    /**
+     * Forms mostly build with unordered list.
+
+        <ul class="form-element group">
+            <li class="group">
+                <label class="item-field">
+                    <span class="item-name">Label</span>
+                    <input />
+                </label>
+            </li>
+        </ul>
+     */ }
+  .form-elements li {
+    position: relative;
+    margin-bottom: 1em; }
+
+/**
+ * Legend
+ *
+ * Make the legend as a block for better styling and control
+ */
+legend {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em; }
+
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Label Styles
+    ------------------------------------------- **/
+/**
+ * Labels
+ *
+ * Fields should always wrapped with a label.
+ * Helper .label class is used for applying label styles for other text elements
+ *
+    <label class="item-field">
+        <span class="item-label"></span>
+        <input type="text" />
+    </label>
+ *
+ */
+label,
+.label {
+  position: relative;
+  display: inline-block; }
+
+/**
+ * Item positions
+ * In most cases, 
+ * item-field is for showing label name and field in same line
+ * item-stacked is for showing label name and field in rows
+ * item-row is however, stacking the label wrappers together
+ */
+.item-field {
+  margin-right: 1em; }
+.item-stacked:not(:only-child) {
+  margin-bottom: 1em; }
+.item-row + .item-row {
+  margin-top: 1em; }
+.item-error {
+  color: #e87352; }
+
+/**
+ * Label texts
+ */
+.item-label,
+.field-label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  /**
+   * When item is stacked, label text will be over the label input
+   */
+  /**
+   * Required field has a star at the beginning of label
+   */ }
+  .item-stacked .item-label, .item-stacked
+  .field-label {
+    display: block; }
+  .required .item-label:before, .required
+  .field-label:before {
+    content: "*";
+    position: absolute;
+    left: -10px; }
+
+/**
+ * Field Help
+ *
+ * Although this is not an actual label, it can be used as helper text for the field
+ */
+.field-help {
+  font-size: .8em;
+  font-style: italic; }
+
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Input Fields
+    ------------------------------------------- **/
+/**
+ * Text based (input[type=text] etc.) field styles
+ *
+ * .text-field class is added in order to styling other elements like a text field
+ */
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"],
+textarea,
+.text-field {
+  -webkit-appearance: none;
+  outline: 0;
+  padding: 5px;
+  border: 1px solid #c6c6c6;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: normal; }
+  input[type="text"]:focus, input[type="text"]:active, input[type="password"]:focus, input[type="password"]:active, input[type="datetime"]:focus, input[type="datetime"]:active, input[type="datetime-local"]:focus, input[type="datetime-local"]:active, input[type="date"]:focus, input[type="date"]:active, input[type="month"]:focus, input[type="month"]:active, input[type="time"]:focus, input[type="time"]:active, input[type="week"]:focus, input[type="week"]:active, input[type="number"]:focus, input[type="number"]:active, input[type="email"]:focus, input[type="email"]:active, input[type="url"]:focus, input[type="url"]:active, input[type="search"]:focus, input[type="search"]:active, input[type="tel"]:focus, input[type="tel"]:active, input[type="color"]:focus, input[type="color"]:active,
+  textarea:focus,
+  textarea:active,
+  .text-field:focus,
+  .text-field:active {
+    border-color: #a6a6a6;
+    background: #fff; }
+  input[type="text"][readonly], input[type="text"].readonly, input[type="password"][readonly], input[type="password"].readonly, input[type="datetime"][readonly], input[type="datetime"].readonly, input[type="datetime-local"][readonly], input[type="datetime-local"].readonly, input[type="date"][readonly], input[type="date"].readonly, input[type="month"][readonly], input[type="month"].readonly, input[type="time"][readonly], input[type="time"].readonly, input[type="week"][readonly], input[type="week"].readonly, input[type="number"][readonly], input[type="number"].readonly, input[type="email"][readonly], input[type="email"].readonly, input[type="url"][readonly], input[type="url"].readonly, input[type="search"][readonly], input[type="search"].readonly, input[type="tel"][readonly], input[type="tel"].readonly, input[type="color"][readonly], input[type="color"].readonly,
+  textarea[readonly],
+  textarea.readonly,
+  .text-field[readonly],
+  .text-field.readonly {
+    cursor: default;
+    border-color: #c6c6c6;
+    background-color: #f9f9f9; }
+  input[type="text"].item-error, input[type="password"].item-error, input[type="datetime"].item-error, input[type="datetime-local"].item-error, input[type="date"].item-error, input[type="month"].item-error, input[type="time"].item-error, input[type="week"].item-error, input[type="number"].item-error, input[type="email"].item-error, input[type="url"].item-error, input[type="search"].item-error, input[type="tel"].item-error, input[type="color"].item-error,
+  textarea.item-error,
+  .text-field.item-error {
+    border-color: #e87352; }
+
+/**
+ * Checkable (checkbox, radio) field styles
+ */
+input[type="checkbox"], input[type="radio"] {
+  vertical-align: middle;
+  /**
+   * Fields and labels together
+   *
+      <label class="item-field">
+          <input type="checkbox" />
+          <span class="item-label">Label</span>
+      </label>
+   */ }
+  input[type="checkbox"] + .field-label,
+  input[type="checkbox"] + .item-label, input[type="radio"] + .field-label,
+  input[type="radio"] + .item-label {
+    font-weight: normal;
+    margin-left: .25em;
+    vertical-align: middle; }
+
+/**
+ * Other input types
+ */
+/**
+ * Textarea
+ *
+ * Textareas are like input text fields in most cases, but they need additional styling
+ * since they are resizable and allows multiple lines
+ */
+textarea {
+  min-height: 3em;
+  resize: vertical; }
+
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Button Styles
+    ------------------------------------------- **/
+/**
+ * In most cases, using buttons with button tag allows more styling options
+ * it is cross browser and meaningful. Also ".button" class is added in order to
+ * get button-like elements
+ */
+button,
+input[type="submit"],
+input[type="reset"], .button, [class*="-action"]:not([class*="-actions"]) {
+  -webkit-apperance: none;
+  -moz-apperance: none;
+  apperance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 6px 15px;
+  background: #c6c6c6;
+  line-height: normal;
+  color: #222;
+  vertical-align: middle; }
+  button:disabled,
+  input[type="submit"]:disabled,
+  input[type="reset"]:disabled, .button:disabled, [class*="-action"]:disabled:not([class*="-actions"]), button.disabled,
+  input.disabled[type="submit"],
+  input.disabled[type="reset"], .disabled.button, .disabled[class*="-action"]:not([class*="-actions"]) {
+    cursor: default;
+    background: #ececec; }
+
+/**
+ * Native button elements
+ * Input button elements
+ */
+button,
+input[type="submit"],
+input[type="reset"] {
+  border: transparent; }
+
+/**
+ * Anchor and other elements
+ */
+.button {
+  text-align: center; }
+  .button, .button:hover, .button:focus, .button:active {
+    text-decoration: none; }
+
+/** 
+ * Action Buttons
+ * specificity increased in order to overwrite [class*="-action"]:not([class*="-actions"])
+ * without using !important rule. By this, it can easily modified `.some-class .primary-action` selector
+ */
+.primary-action.primary-action {
+  background-color: #009bdc;
+  color: #fff; }
+
+.secondary-action.secondary-action {
+  background-color: #67af00;
+  color: #fff; }
+
+.tertiary-action.tertiary-action {
+  background-color: #ffa900;
+  color: #fff; }
+
+.cancel-action.cancel-action,
+input[type="reset"] {
+  background-color: #e87352;
+  color: #fff; }
+
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Table Styles
+    ------------------------------------------- **/
+/**
+ * Table
+ */
+table {
+  width: 100%; }
+
+/**
+ * TFoot
+ */
+tfoot td:only-child {
+  text-align: right; }
+
+/**
+ * Cells
+ */
+th,
+td {
+  padding: 0.5em;
+  text-align: left; }
+
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Link & Nav Styles
+    ------------------------------------------- **/
+/**
+ * Links
+ *
+ * Basic anchor styling
+ */
+a {
+  display: inline-block;
+  padding: 2px; }
+  nav a {
+    text-decoration: none; }
+
+/**
+ * Nav
+ *
+ * Navigation items
+ */
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Heading Styles
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Lists
+    ------------------------------------------- **/
+ol,
+ul {
+  list-style-position: outside;
+  padding-left: 20px; }
+
+dl {
+  padding-left: 20px; }
+  dl dt {
+    font-weight: bold; }
+
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Inline elements
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Block Styles
+    ------------------------------------------- **/
+/** -------------------------------------------
+    Default Components
+    ------------------------------------------- **/
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Components Container
+    ------------------------------------------- **/
+/**
+ * Media Component
+ */
+/* @author Bilal Cinarli */
+/** -------------------------------------------
+    Media Component
+    ------------------------------------------- **/
+/**
+ * Media Item
+ *
+ * A media item indicates a block consists with a media item (image, flash, video etc.) and a text content
+ */
+.media-visual {
+  display: block;
+  float: left;
+  margin-right: 1em; }
+
+.media-text + .media-visual {
+  float: right;
+  margin-right: auto;
+  margin-left: 1em; }
+
 /*# sourceMappingURL=tests.css.map */
