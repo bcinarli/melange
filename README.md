@@ -30,4 +30,7 @@ After copying the files,
 @import "<path-to-melange>/lib/melange";
 
 // Then your own Styles
+
+// After you styles, add Melange Auxiliary components
+@import "<path-to-melange>/lib/melange/auxiliary/auxiliary"
 ```
