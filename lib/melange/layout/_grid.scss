@@ -10,6 +10,11 @@
  */
 @mixin grid-columns(){
     $column-width: 100/$base-grid-columns;
+    $length: length($numbers);
+
+    @if $base-grid-columns > $length {
+        @error "Named numbers in your grid definitions are supported up to #{$length} columns \a but you tried to define grid columns up to #{$base-grid-columns}, you need the change your column amount \a smaller than #{$length} or update you $numbers variable in your settings files matching your column size.";
+    }
 
     @for $i from 1 through $base-grid-columns {
         .#{$namespace}#{nth($numbers, $i)}-#{$column-name},
