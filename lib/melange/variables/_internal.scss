@@ -1,0 +1,11 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Internal Variables
+    ------------------------------------------- **/
+/**
+  * Here are some internal variables that are not used in styling
+  * but for optimization calculations or controlling certain options
+  */
+// width fragment mapping for grouping same width grid or size definition
+$_width-fragments: ();
