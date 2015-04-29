@@ -22,7 +22,6 @@
         @error "Fragmented width names (ordinals) are supported up to #{$length} fragment \a but you tried to define #{$fragment}, you need the change your fragment amount \a smaller than #{$length} or update you $ordinals & $ordinals-plural variables in your settings files matching your fragment size.";
     }
 
-
     @if $end == 0 {
         $end: 1;
     }
@@ -30,17 +29,37 @@
     @for $i from 1 through $end {
         $ord: nth($ordinals-plural, $fragment);
 
-        .#{nth($numbers, $i)}-#{$ord} {
-            @if($base-float-widths == true){
-                @extend %column;
-            }
-            width: ($fragment-size * $i) * 1%;
-        }
+        $width: ($fragment-size * $i) * 1%;
+        $classname: #{nth($numbers, $i)}-#{$ord};
 
-        @if $fragment > 2 and $i == 1 {
-            // also add singular version
-            .#{nth($numbers, $i)}-#{nth($ordinals, $fragment)} {
-                @extend .#{nth($numbers, $i)}-#{$ord};
+        @if map-has-key($_width-fragments, "#{$width}"){
+            .#{$classname} {
+                $mapped: map-get($_width-fragments, "#{$width}");
+                @extend %#{$mapped};
+            }
+        }
+        @else {
+            // globally modify the defined fragment list
+            $_width-fragments: map-merge($_width-fragments, ("#{$width}": $classname)) !global;
+
+            // placeholder class for width fragment for extending classes
+            %#{$classname} {
+                width: $width
+            }
+
+            .#{$classname} {
+                @if($base-float-widths == true){
+                    @extend %column;
+                }
+                @extend %#{$classname};
+            }
+
+            @if $fragment > 2 and $i == 1 {
+                // also add singular version
+                .#{nth($numbers, $i)}-#{nth($ordinals, $fragment)} {
+                    // extend plural class
+                    @extend .#{$classname};
+                }
             }
         }
     }
