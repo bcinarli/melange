@@ -30,7 +30,7 @@
         $ord: nth($ordinals-plural, $fragment);
 
         $width: ($fragment-size * $i) * 1%;
-        $classname: #{nth($numbers, $i)}-#{$ord};
+        $classname: #{$namespace}#{nth($numbers, $i)}-#{$ord};
 
         @if map-has-key($_width-fragments, "#{$width}"){
             .#{$classname} {
