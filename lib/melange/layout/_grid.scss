@@ -8,7 +8,7 @@
  *
  * Apart from our generic widths, columns have gutter for spacing and they are floated by default.
  */
-@mixin grid-columns(){
+@mixin grid-columns() {
     $column-width: 100/$base-grid-columns;
     $length: length($numbers);
 
@@ -17,9 +17,29 @@
     }
 
     @for $i from 1 through $base-grid-columns {
-        .#{$namespace}#{nth($numbers, $i)}-#{$column-name},
-        .#{$namespace}#{nth($numbers, $i)}-#{$column-name-plural} {
-            width: $column-width * $i * 1%;
+        $width: $column-width * $i;
+        $classname: #{$namespace}#{nth($numbers, $i)}-#{$column-name};
+        $classname-plural: #{$namespace}#{nth($numbers, $i)}-#{$column-name-plural};
+
+        @if map-has-key($_width-fragments, "#{$width}") {
+            .#{$classname},
+            .#{$classname-plural} {
+                $mapped: map-get($_width-fragments, "#{$width}");
+                @extend %#{$mapped};
+            }
+        } @else {
+            // globally modify the defined fragment list
+            $_width-fragments: map-merge($_width-fragments, ("#{$width}": $classname)) !global;
+
+            // placeholder class for width fragment for extending classes
+            %#{$classname} {
+                width: $width * 1%;
+            }
+
+            .#{$classname},
+            .#{$classname-plural} {
+                @extend %#{$classname};
+            }
         }
     }
 }
@@ -29,7 +49,7 @@
  *
  * When you need much larger spacing between grid columns, you can offset a column by one or more column widths
  */
-@mixin offset(){
+@mixin offset() {
     $column-width: 100/$base-grid-columns;
     $last-offset: $base-grid-columns - 1;
 
@@ -74,7 +94,8 @@
     float: left;
     padding: 0 $base-gutter;
 
-    &.#{$namespace}#{$column-name}-parent { // for nested columns, remove paddings for the parent grid column
+    &.#{$namespace}#{$column-name}-parent {
+        // for nested columns, remove paddings for the parent grid column
         padding: 0;
     }
 }
