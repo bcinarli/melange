@@ -11,6 +11,7 @@
 %button {
     @include prefixer(apperance, none);
 	@include disable-text-select();
+    @include app-transition();
 	
     display: inline-block;
     cursor: pointer;
@@ -23,6 +24,14 @@
     &.disabled {
         cursor: default;
         background: lighten($base-button-color, 15);
+    }
+
+    &:hover {
+        background-color: darken($base-button-color, 7.5);
+    }
+
+    &:active {
+        @include box-shadow(inset 0 2px 3px rgba(0, 0, 0, .3));
     }
 }
 
@@ -50,7 +59,7 @@ input.button {
 	&:focus,
 	&:active {
 		text-decoration: none;
-	} 
+	}
 }
 
 @if($support-for-ie8 == true){
@@ -85,20 +94,36 @@ input.button {
 .#{$primary-button}.#{$primary-button} {
     background-color: $base-primary-color;
     color: $base-primary-text-color;
+
+    &:hover {
+        background-color: darken($base-primary-color, 7.5);
+    }
 }
 
 .#{$secondary-button}.#{$secondary-button} {
     background-color: $base-secondary-color;
     color: $base-secondary-text-color;
+
+    &:hover {
+        background-color: darken($base-secondary-color, 7.5);
+    }
 }
 
 .#{$tertiary-button}.#{$tertiary-button} {
     background-color: $base-tertiary-color;
     color: $base-tertiary-text-color;
+
+    &:hover {
+        background-color: darken($base-tertiary-color, 7.5);
+    }
 }
 
 .#{$cancel-button}.#{$cancel-button},
 input[type="reset"] {
     background-color: $base-cancel-color;
     color: $base-cancel-text-color;
+
+    &:hover {
+        background-color: darken($base-cancel-color, 7.5);
+    }
 }
