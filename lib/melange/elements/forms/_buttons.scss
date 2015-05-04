@@ -27,6 +27,7 @@
     }
 
     &:hover {
+        color: $base-button-text-color;
         background-color: darken($base-button-color, 7.5);
     }
 
@@ -97,6 +98,7 @@ input.button {
 
     &:hover {
         background-color: darken($base-primary-color, 7.5);
+        color: $base-primary-text-color;
     }
 }
 
@@ -106,6 +108,7 @@ input.button {
 
     &:hover {
         background-color: darken($base-secondary-color, 7.5);
+        color: $base-secondary-text-color;
     }
 }
 
@@ -115,6 +118,7 @@ input.button {
 
     &:hover {
         background-color: darken($base-tertiary-color, 7.5);
+        color: $base-tertiary-text-color;
     }
 }
 
@@ -125,5 +129,6 @@ input[type="reset"] {
 
     &:hover {
         background-color: darken($base-cancel-color, 7.5);
+        color: $base-cancel-text-color;
     }
 }
