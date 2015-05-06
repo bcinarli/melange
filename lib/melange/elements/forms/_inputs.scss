@@ -9,10 +9,7 @@
  * .text-field class is added in order to styling other elements like a text field
  */
 
-#{$_text_fields},
-textarea,
-.text-field {
-    -webkit-appearance: none;
+%text-field {
     outline: 0;
     padding: $base-input-spacing;
     border: $base-border-width solid $base-border-color;
@@ -39,6 +36,13 @@ textarea,
     &.item-error {
         border-color: $color-error;
     }
+}
+
+#{$_text_fields},
+textarea,
+.text-field {
+    -webkit-appearance: none;
+    @extend %text-field;
 }
 
 
