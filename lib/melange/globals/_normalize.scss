@@ -7,7 +7,7 @@
  */
 
 html {
-    font-family: sans-serif; /* 1 */
+    //font-family: sans-serif; /* 1 */ it will set via Melange settings
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -131,7 +131,7 @@ dfn {
  */
 
 h1 {
-    font-size: 2em;
+    font-size: 2rem;
     margin: 0.67em 0;
 }
 
@@ -229,7 +229,7 @@ kbd,
 pre,
 samp {
     font-family: monospace, monospace;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 /* Forms
