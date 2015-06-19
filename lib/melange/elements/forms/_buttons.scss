@@ -19,6 +19,10 @@
     background: $base-button-color;
 	line-height: normal;
     color: $base-button-text-color;
+
+    @if($base-button-border-radius != null){
+        border-radius: $base-button-border-radius;
+    }
 	
     &:disabled,
     &.disabled {
