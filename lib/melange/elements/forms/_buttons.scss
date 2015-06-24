@@ -10,15 +10,16 @@
  */
 %button {
     @include prefixer(apperance, none);
-	@include disable-text-select();
+    @include disable-text-select();
     @include app-transition();
 	
     display: inline-block;
     cursor: pointer;
-	padding: ($base-input-spacing + 1px) (3 * $base-input-spacing);
+    padding: ($base-input-spacing + 1px) (3 * $base-input-spacing);
     background: $base-button-color;
-	line-height: normal;
+    line-height: normal;
     color: $base-button-text-color;
+    text-decoration: none;
 
     @if($base-button-border-radius != null){
         border-radius: $base-button-border-radius;
