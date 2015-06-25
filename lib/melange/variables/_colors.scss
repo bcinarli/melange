@@ -15,7 +15,7 @@ $color-cancel     : #e87352 !default;
 $color-error      : $color-cancel !default;
 $color-text       : #222 !default;
 $color-light-text : #999 !default;
-$color-light-gray : #f9f9f9 !default;
+$color-light-gray : #eee !default;
 $color-gray       : #c6c6c6 !default;
 $color-dark-gray  : #a6a6a6 !default;
 $color-white      : #fff !default;
@@ -65,6 +65,14 @@ $base-button-highlight-color : null !default;
 $base-button-text-color      : $color-text !default;
 
 /**
+ * Disabled Button
+ */
+$base-disabled-color           : $color-light-gray !default;
+$base-disabled-highlight-color : $color-light-gray !default;
+$base-disabled-text-color      : $color-dark-gray !default;
+
+
+/**
  * Primary Action Button
  *
  * Maybe used for call-to-action button or/and save/submit buttons in forms
@@ -107,6 +115,10 @@ $base-colors: (
         'standart': $base-button-color,
         'standart-highlight': $base-button-highlight-color,
         'standart-text': $base-button-text-color,
+
+        'disabled': $base-disabled-color,
+        'disabled-highlight': $base-disabled-highlight-color,
+        'disabled-text': $base-disabled-text-color,
 
         'primary': $base-primary-color,
         'primary-highlight': $base-primary-highlight-color,
