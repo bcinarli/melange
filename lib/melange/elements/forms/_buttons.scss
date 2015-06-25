@@ -4,6 +4,26 @@
     Button Styles
     ------------------------------------------- **/
 /**
+ * Button colors
+ */
+@mixin button-colors($type){
+    background-color: map-get($base-colors, $type);
+    color: map-get($base-colors, #{$type}-text);
+
+    &:hover {
+        @if (map-get($base-colors, #{$type}-highlight) != null) {
+            background-color: map-get($base-colors, #{$type}-highlight);
+        }
+
+        @else {
+            background-color: darken(map-get($base-colors, $type), 7.5);
+        }
+        color: map-get($base-colors, #{$type}-text);
+    }
+}
+
+
+/**
  * In most cases, using buttons with button tag allows more styling options
  * it is cross browser and meaningful. Also ".button" class is added in order to
  * get button-like elements
@@ -12,28 +32,23 @@
     @include prefixer(apperance, none);
     @include disable-text-select();
     @include app-transition();
-	
+
     display: inline-block;
     cursor: pointer;
     padding: ($base-input-spacing + 1px) (3 * $base-input-spacing);
-    background: $base-button-color;
     line-height: normal;
-    color: $base-button-text-color;
     text-decoration: none;
 
     @if($base-button-border-radius != null){
         border-radius: $base-button-border-radius;
     }
-	
+
+    @include button-colors('standart');
+
     &:disabled,
     &.disabled {
         cursor: default;
         background: lighten($base-button-color, 15);
-    }
-
-    &:hover {
-        color: $base-button-text-color;
-        background-color: darken($base-button-color, 7.5);
     }
 
     &:active {
@@ -49,48 +64,48 @@ button,
 input[type="submit"],
 input[type="reset"],
 input.button {
-	@extend %button;
-	border: transparent;
+    @extend %button;
+    border: transparent;
 }
 
 /**
  * Anchor and other elements
  */
 .button {
-	@extend %button;	
-	text-align: center;
-	
-	&,
-	&:hover,
-	&:focus,
-	&:active {
-		text-decoration: none;
-	}
+    @extend %button;
+    text-align: center;
+
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
 }
 
 @if($support-for-ie8 == true){
-	[class*="#{$action-button}"]{
-    	@extend %button;
-	}
-	[class*="#{$action-button-wrapper}"] {
-		display: inherit;
-		cursor: inherit;
-		padding: inherit;
-		background: inherit;
-		font-weight: inherit;
-		text-align: inherit;
-		
-		&:hover,
-		&:focus,
-		&:active {
-			text-decoration: inherit;
-		}
-	}
+    [class*="#{$action-button}"]{
+        @extend %button;
+    }
+    [class*="#{$action-button-wrapper}"] {
+        display: inherit;
+        cursor: inherit;
+        padding: inherit;
+        background: inherit;
+        font-weight: inherit;
+        text-align: inherit;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: inherit;
+        }
+    }
 }
 @else {
-	[class*="#{$action-button}"]:not([class*="#{$action-button-wrapper}"]) {
-		@extend %button;
-	}
+    [class*="#{$action-button}"]:not([class*="#{$action-button-wrapper}"]) {
+        @extend %button;
+    }
 }
 /** 
  * Action Buttons
@@ -98,42 +113,18 @@ input.button {
  * without using !important rule. By this, it can easily modified `.some-class .primary-action` selector
  */
 .#{$primary-button}.#{$primary-button} {
-    background-color: $base-primary-color;
-    color: $base-primary-text-color;
-
-    &:hover {
-        background-color: darken($base-primary-color, 7.5);
-        color: $base-primary-text-color;
-    }
+    @include button-colors('primary');
 }
 
 .#{$secondary-button}.#{$secondary-button} {
-    background-color: $base-secondary-color;
-    color: $base-secondary-text-color;
-
-    &:hover {
-        background-color: darken($base-secondary-color, 7.5);
-        color: $base-secondary-text-color;
-    }
+    @include button-colors('secondary');
 }
 
 .#{$tertiary-button}.#{$tertiary-button} {
-    background-color: $base-tertiary-color;
-    color: $base-tertiary-text-color;
-
-    &:hover {
-        background-color: darken($base-tertiary-color, 7.5);
-        color: $base-tertiary-text-color;
-    }
+    @include button-colors('tertiary');
 }
 
 .#{$cancel-button}.#{$cancel-button},
 input[type="reset"] {
-    background-color: $base-cancel-color;
-    color: $base-cancel-text-color;
-
-    &:hover {
-        background-color: darken($base-cancel-color, 7.5);
-        color: $base-cancel-text-color;
-    }
+    @include button-colors('cancel');
 }
