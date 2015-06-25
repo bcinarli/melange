@@ -60,37 +60,67 @@ $base-field-readonly    : $color-light-gray !default;
  *
  * Unstyled, normal button
  */
-$base-button-color      : $color-gray !default;
-$base-button-text-color : $color-text !default;
+$base-button-color           : $color-gray !default;
+$base-button-highlight-color : null !default;
+$base-button-text-color      : $color-text !default;
 
 /**
  * Primary Action Button
  *
  * Maybe used for call-to-action button or/and save/submit buttons in forms
  */
-$base-primary-color     : $color-primary !default;
-$base-primary-text-color: $color-white !default;
+$base-primary-color           : $color-primary !default;
+$base-primary-highlight-color : null !default;
+$base-primary-text-color      : $color-white !default;
 
 /**
  * Secondary Action Button
  *
  * Useful for indication secondary action in a form near the primary action button
  */
-$base-secondary-color       : $color-secondary !default;
-$base-secondary-text-color  : $color-white !default;
+$base-secondary-color           : $color-secondary !default;
+$base-secondary-highlight-color : null !default;
+$base-secondary-text-color      : $color-white !default;
 
 /**
  * Tertiary Action Button
  *
  * Useful for actions whether they are not fit for primary or secondary
  */
-$base-tertiary-color        : $color-tertiary !default;
-$base-tertiary-text-color   : $color-white !default;
+$base-tertiary-color           : $color-tertiary !default;
+$base-tertiary-highlight-color : null !default;
+$base-tertiary-text-color      : $color-white !default;
 
 /**
  * Cancel Action Button
  *
  * Simply used for cancel button for a form or call-to-action, confirmation etc.
  */
-$base-cancel-color      : $color-cancel !default;
-$base-cancel-text-color : $color-white !default;
+$base-cancel-color           : $color-cancel !default;
+$base-cancel-highlight-color : null !default;
+$base-cancel-text-color      : $color-white !default;
+
+/**
+ * Color maps
+ */
+$base-colors: (
+        'standart': $base-button-color,
+        'standart-highlight': $base-button-highlight-color,
+        'standart-text': $base-button-text-color,
+
+        'primary': $base-primary-color,
+        'primary-highlight': $base-primary-highlight-color,
+        'primary-text': $base-primary-text-color,
+
+        'secondary': $base-secondary-color,
+        'secondary-higlight': $base-secondary-highlight-color,
+        'secondary-text': $base-secondary-text-color,
+
+        'tertiary': $base-tertiary-color,
+        'tertiary-highlight': $base-tertiary-highlight-color,
+        'tertiary-text': $base-tertiary-text-color,
+
+        'cancel': $base-cancel-color,
+        'cancel-higlight': $base-cancel-highlight-color,
+        'cancel-text': $base-cancel-text-color
+);
