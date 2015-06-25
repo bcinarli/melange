@@ -35,7 +35,7 @@
 
     display: inline-block;
     cursor: pointer;
-    padding: ($base-input-spacing + 1px) (3 * $base-input-spacing);
+    padding: $base-input-spacing (3 * $base-input-spacing);
     line-height: normal;
     text-decoration: none;
 
@@ -48,7 +48,7 @@
     &:disabled,
     &.disabled {
         cursor: default;
-        background: lighten($base-button-color, 15);
+        @include button-colors('disabled');
     }
 
     &:active {
