@@ -27,3 +27,19 @@
 	clip: rect(0 0 0 0);
 	clip: rect(0, 0, 0, 0);
 }
+
+/**
+ * Device visibility
+ */
+.mobile-visible {
+    // do not interfere with mobile visibility, only hide bigger screens
+    @media screen and (min-width: $base-phone + 1px) {
+        display: none;
+    }
+}
+
+.mobile-hidden {
+    @media screen and (max-width: $base-phone) {
+        display: none;
+    }
+}
