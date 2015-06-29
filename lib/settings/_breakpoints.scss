@@ -1,0 +1,37 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Breakpoint Variables
+    ------------------------------------------- **/
+/**
+ * Rather then using device specific breakpoints, width breakpoints are more 
+ * appropriate for wider range of devices.
+ */
+ 
+/**
+ * Wide Screen
+ * @default $base-widescreen: 1824px
+ */
+$base-widescreen: null; // mostly used width min-width
+
+/**
+ * Desktop / Laptop
+ * @default $base-desktop: 1224px
+ */
+$base-desktop: null;
+
+/**
+ * Tablet
+ * @default $base-tablet: 769px
+ * @default $base-tablet-landscape: 1024px
+ * @default $base-tablet-portrait: 768px
+ */
+$base-tablet: null;
+$base-tablet-landscape: null; // max-width for tablet landscape
+$base-tablet-portrait: null; // max-width for tablet portrait
+
+/**
+ * Phone
+ * @default $base-phone: 420px
+ */
+$base-phone: null; // max-width for phones
