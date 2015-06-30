@@ -1,6 +1,6 @@
 {
   "name": "melange",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "homepage": "https://github.com/bcinarli/melange",
   "authors": [
     "Bilal Çınarlı <bcinarli@gmail.com>"
@@ -8,7 +8,7 @@
   "description": "A low level SASS based CSS framework for general usage",
   "main": "lib/_melange.scss",
   "devDependencies": {
-    "caffeine": ">=0.2.0"
+    "caffeine": "latest"
   },
   "keywords": [
     "SASS",
