@@ -31,6 +31,27 @@
 /**
  * Device visibility
  */
+.desktop-visible {
+    // do not interfere element's display, just hide when not needed
+    @media screen and (max-width: $base-desktop - 1px){
+    	display: none;
+    }
+}
+
+.desktop-hidden,
+.tablet-visible {
+    @media screen and (min-width: $base-desktop){
+    	display: none;
+    }
+}
+
+.tablet-hidden {
+    // hide if in the tablet region
+    @media screen and (min-width: $base-phone + 1px) and (max-width: $base-tablet-landscape) {
+    	display: none;
+    }
+}
+
 .mobile-visible {
     // do not interfere with mobile visibility, only hide bigger screens
     @media screen and (min-width: $base-phone + 1px) {
@@ -38,7 +59,8 @@
     }
 }
 
-.mobile-hidden {
+.mobile-hidden,
+.tablet-visible {
     @media screen and (max-width: $base-phone) {
         display: none;
     }
