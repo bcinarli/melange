@@ -29,3 +29,15 @@ $base-tablet-portrait: 768px !default; // max-width for tablet portrait
  * Phone
  */
 $base-phone: 420px !default; // max-width for phones
+
+/**
+ * Breakpoint Map
+ */
+$base-breakpoints: (
+    phone: $base-phone,
+    tablet: $base-tablet,
+    tablet-portrait: $base-tablet-portrait,
+    tablet-landscape: $base-tablet-landscape,
+    desktop: $base-desktop,
+    widescreen: $base-widescreen
+)
