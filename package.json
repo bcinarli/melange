@@ -1,6 +1,6 @@
 {
   "name": "melange",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A low level SASS based CSS framework for general usage",
   "repository": {
     "type": "git",
