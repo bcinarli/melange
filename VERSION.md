@@ -1,4 +1,6 @@
 # Melange Change Log
+## Version 0.5.1
+- Fix: Missing "disabled" styles in input elements
 
 ## Version 0.5.0
 - New: Border Radius setting added for button styles. Use `$base-button-border-radius` variable to set one. Default is `null`
