@@ -37,6 +37,13 @@
         background-color: $base-field-readonly;
     }
 
+    &[disabled],
+    &.disabled {
+        cursor: default;
+        border-color: $base-border-disabled;
+        background-color: $base-field-disabled;
+    }
+
     &.item-error {
         border-color: $color-error;
     }
