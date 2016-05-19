@@ -4,7 +4,7 @@ Melange CSS kodlaması için kullanılabilecek bir kütüphaneden (framework) ç
 ## Dosya ve Klasör Yapısı
 Temel Melange mimarisi, geliştirmeler için yapılacak klasör yapısına örnek teşkil edecek şekilde hazırlanmıştır. Melange'ı uygulamanıza ekledikten sonra, kullanabileceğiniz örnek yapı [Melange Sample](https://github.com/bcinarli/melange-sample/tree/master/source/scss) çalışması altında gösterilmiştir.
 
-Uygulama içinde genel komponentler ve bunlara bağlı atomik partiküller şeklinde atomik dizayn prensiplerine göre düzenlenmiştir. Bu kurgu içinde [atom] -> [partikül] -> [component] -> [layout] -> [sayfa] sıralamasıyla geliştirmeler yapılmalıdır.
+Uygulama içinde genel komponentler ve bunlara bağlı atomik partiküller şeklinde atomik dizayn prensiplerine göre düzenlenmiştir. Bu kurgu içinde [eleman] -> [partikül] -> [komponent] -> [layout] -> [sayfa] sıralamasıyla geliştirmeler yapılmalıdır.
 
 Klasörlerin her birinin içinde klasör ile aynı isimde bir _container_ `scss` dosyası bulunmaktadır. Bu klasör içindeki diğer bütün `scss` dosyaları, bu _container_ içerisine eklenmelidir. Yine bir üst klasör içindeki _container_ dosyasına ya da ana stil dosyasına sadece bu _container_ dosyaları `import` edilmelidir.
 
@@ -155,7 +155,7 @@ Buradan yola çıkarak, fluid grid içerisindeki tanımlar ilk bakışta anlaş�
 ## Tanımların Yapılması
 Seçicilerinizi planlarken ve içerisine tanımları eklenirken mümkün olduğu kadar sadece ve sonradan overwriteların az olağı şeklide çalışılması tavsiye edilmektedir. Uygulamayı bir bütün olarak planlamalıdır. Özellikle responsive tasarımlarda tanımların küçük ekrandan büyüğe ya da büyük ekrandan küçüğe göre kurgusunda yapılacak düzenlemeler, kodunuzun daha yönetilebilir ve sade olmasına imkan verecektir. Bu konuyla alakalı detaylı anlatımı HTMLMagazin'in [Overwrite Edeceğiniz Kodu Baştan Yazmayın!](http://hmgz.in/9) makalesinde bulabilirsiniz.
 
-## Melange Kullanım Detayları
+## Melange Default Tanım Detayları
 ### Ayarlar (settings)
 Hem uygulamanız için kendi hazırladığınız kodlarda hem de Melange'ın ön tanımlı kodlarındaki değerleri değiştirebileceğiniz değişkenlere sahiptir. Ayarlar klasörünün içindeki dosyaları aynen kullanabileceğiniz gibi, ihtiyacınız olan yeni ayar grupları için istediğiniz şekilde yeni ayar dosyalarını ekleyebilirsiniz.
 
@@ -248,9 +248,25 @@ Formlar içerisinde kullanılan fieldlar ve butonları genel olarak bir grup ola
 -Label'ın hata mesajı gösterimi için `item-error` classı `label` elemanına eklenebilir.  
 -Labelların altında fieldlar ile alakalı yardım metni gösterimleri için `field-help` classı kullanılabilir.
 
-#### Listeler
 #### Linkler
+Dokunmatik ekranlarda metin içlerindeki linklerin daha kolay tıklanması için, bütün anchor elemanlarına `2px` padding eklenmiş ve `inline-block` uygulanmıştır.
+
+Navigation (`nav`) altında anchors elemanlarından `text-decoration` kaldırılmıştır. Ayrıca `nav` içindeki `ul` listeleri `%reset` ile resetlenmiştir.
+
+#### Listeler
+_lists_ içerisindeli `ol`, `ul` elemanlarında `list-style` dışarıya alınmıştır ve `$base-gutter` kadar soldan boşluk konulmuştur. `dl` türündeki listeler için de, `dt` elemanları `bold`yapılmıştır.
+
 #### Tablo
+* Bütün tabloların genişliği içeriğe tamamen yayılacak şekilde %100'e çekilmiştir. 
+* `tfoot` içerisinde sadece bir hücre (`td`) bulunduğu durumlarda, içerik sağa yaslanmıştır.
+* `td` ve `th` için `$base-spacing`'in yarısı kadar padding eklenmiş ve içerikleri sola yaslanmıştır.
 
 ### Komponentler
+Komponentler büyük ve farklı eleman içeren HTML yapılarıdır. Melange içinde ön tanımlı olarak bir tane komponent eklenmiştir. Kendi uygulamanız için istediğiniz kadar çok komponent ekleyebilirsiniz. 
+
 #### Media Komponent
+Media komponenti, içerisinde resim ve metni bir arada bulunduracak, genel olarak genişlik, içerik miktarı, nesting durumları bilinmeyen yapıları kolay hazırlayabilmek için hazırlanmıştır. Bu kullanımın mantığını detaylı olarak yıllar önce Nicole Sullivan [The Media Object Saves Hundreds of Lines of Code](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) makalesinde anlatmıştır.
+
+Media komponenti, `.media` classına sahip bir container ve onun içerisinde bulunan `.media-visual` ve `.media-text` classlarına sahip elemanlardan oluşmaktadır. 
+
+Media komponenti, resmin sağda metnin solda ya da metnin sağda resmin solda olması durumlarını ve nesting olabilme özelliklerini desteklemektedir.
