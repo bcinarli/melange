@@ -9,7 +9,7 @@ Uygulama içinde genel komponentler ve bunlara bağlı atomik partiküller şekl
 Klasörlerin her birinin içinde klasör ile aynı isimde bir _container_ `scss` dosyası bulunmaktadır. Bu klasör içindeki diğer bütün `scss` dosyaları, bu _container_ içerisine eklenmelidir. Yine bir üst klasör içindeki _container_ dosyasına ya da ana stil dosyasına sadece bu _container_ dosyaları `import` edilmelidir.
 
 Standart klasör yapısı;  
-_Klasörler içerisindeki bazı dosyaların içi boştur. Bunlar sadece kendi uygulamanızı geliştirirken, klasör ve dosya kurgusunun nasıl yapılacağına örnek teşkil etmesi için konuşmuştur._
+_Klasörler içerisindeki bazı dosyaların içi boştur. Bunlar sadece kendi uygulamanızı geliştirirken, klasör ve dosya kurgusunun nasıl yapılacağına örnek teşkil etmesi için konulmuştur._
 ```
 .  
 |-- _melange.scss  
@@ -67,7 +67,7 @@ _Klasörler içerisindeki bazı dosyaların içi boştur. Bunlar sadece kendi uy
         '-- _variables.scss
 ```
 Buradaki klasörlerin içerikleri özetle;
-* __settings__: Melange'ın stnadart olarak kullandığı değişkenlerin değerlerini kendi tasarımınız ve uygulamanıza göre değiştirebileceğiniz ayarların bulunduğu dosyalar.
+* __settings__: Melange'ın standart olarak kullandığı değişkenlerin değerlerini kendi tasarımınız ve uygulamanıza göre değiştirebileceğiniz ayarların bulunduğu dosyalar.
 * __melange__: Melange mimarisi genel dosya ve klasörleri
   * _auxiliary_: Genel olarak HTML/Sayfa elemanlarının sayfadaki görünümlerinin son/final (pluginlere eklenen gösterme/gizleme gibi) biçimlerini tanımlar. `is-hidden`, `for-screen-readers-only` gibi, başka stilleri ezecek mutlak sonuçları barındırır.
   * _components_: Default komponentleri barındırır. Geliştirmeyi serbest bırakmak ve geliştiriciyi gereksiz HTML yapıları ile kısıtlamamak için Melange içinde mümkün olduğunca az ön tanımlı yapı bulunmaktadır. 
@@ -76,7 +76,7 @@ Buradaki klasörlerin içerikleri özetle;
   * _layout_: içerisinde, genişlik ve basit fluid grid tanımlarının yapıldığı mixinler bulunmaktadır.
   * _variables_: içerisinde hem _settings_ içerisinde ezilmesine izin verilen hem de Melange'ın kendi standart tanımlamalarını yaparken kullandığı değişkenler bulunmaktadır.
 
-Kendi uygulamanız içerisine benzer klasör yapısını
+Kendi uygulamanız içerisinde kullanabileceğiniz benzer klasör yapısı;
 ```
 .  
 |-- styles.scss  
