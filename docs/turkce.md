@@ -146,3 +146,72 @@ Uygulama içindeki klasörlerde özetle beklenen kurgu aşağıdaki gibidir;
   * _page_: Normalde durumlarda, _layout_ içerisinde zaten sayfalarınızın genel görünümü/layoutu ile alakalı bütün varyasyonları sağlayabiliyor olduğu varsayılmaktadır. Çok özel durumlar layout görünümleri dışında __kullanılması tavsiye edilmez__.
   * _particules_: Komponent kadar büyük olmayıp, birden fazla komponentin içinde tekrar tekrar kullanılabilecek küçük eleman gruplarıdır. Buralarda örneğin, _tag_, _fiyat gösterimi_ gibi yapılar düşünülebilir.
   * _tools_: Kullanabileceğiniz, _Caffeine_ yada benzeri başka bir mixin kütüphanesinde bulunmayan, uygulamanıza özel hazırlayabileceğiniz _mixin_ ve _fonksiyon_ tanımlarıdır.
+
+## İsimlendirme
+Melange içindeki isimlendirmeler, günlük kullanımda kolay anlaşılabilecek, iç güdüsel olarak benzer ögelerin isimlerini tahmin etmeye yarayacak ve tasarımdan bağımsız olarak genel-geçer kullanılabilecek şekilde düşünülmüştür. Buradaki kullanım mantığı için detaylı anlatımı [HTMLMagazin](http://htmlmag.com)'in, [CSS Tanımlarını İsimlendirme - Temel Kavramlar](http://hmgz.in/o) makalesinde bulabilirsiniz.
+
+Buradan yola çıkarak, fluid grid içerisindeki tanımlar ilk bakışta anlaşılması zor olan `col-2-3` yerine `three-columns`, `five-columns` gibi zaten kolon genişliğinin/sayısının günlük konuşma dilinde söyleneceği gibi hazırlanmıştır. Benzer şeklide, genişlik sınıfları da, `one-whole`, `one-half`, `two-quarters` şeklinde belirlenmiştir.
+
+## Tanımların Yapılması
+Seçicilerinizi planlarken ve içerisine tanımları eklenirken mümkün olduğu kadar sadece ve sonradan overwriteların az olağı şeklide çalışılması tavsiye edilmektedir. Uygulamayı bir bütün olarak planlamalıdır. Özellikle responsive tasarımlarda tanımların küçük ekrandan büyüğe ya da büyük ekrandan küçüğe göre kurgusunda yapılacak düzenlemeler, kodunuzun daha yönetilebilir ve sade olmasına imkan verecektir. Bu konuyla alakalı detaylı anlatımı HTMLMagazin'in [Overwrite Edeceğiniz Kodu Baştan Yazmayın!](http://hmgz.in/9) makalesinde bulabilirsiniz.
+
+## Melange Kullanım Detayları
+### Ayarlar (settings)
+Hem uygulamanız için kendi hazırladığınız kodlarda hem de Melange'ın ön tanımlı kodlarındaki değerleri değiştirebileceğiniz değişkenlere sahiptir. Ayarlar klasörünün içindeki dosyaları aynen kullanabileceğiniz gibi, ihtiyacınız olan yeni ayar grupları için istediğiniz şekilde yeni ayar dosyalarını ekleyebilirsiniz.
+
+#### Animations
+Uygulamanız içerisinde kullanabileceğiniz [_Caffeine_](https://github.com/bcinarli/caffeine) `app-transition` mixini için gerekli duration ve easing tanımlarını animations ayarları içerisine ekleyebilirsiniz. `$base-duration` için default değer `.4s`, `$base-easing` için default değer ise `ease`dir.
+
+#### Breakpoints
+Sayfanızın reponsive design kırılım noktaları için kullanabileceğiniz kırılım noktaları değerleridir. Geniş ekran, masa üstü, tablet ve telefon için tanımlanmışlardır. Genel olarak _media queryler_ içinde `min-width` ile beraber kullanılabilecek geniş ekran genişlik tanımı `$base-widescreen` için default değer `1824px` dir. Yine `min-width` ile kullanılması tavsiye edilen desktop genişlik tanımı `$base-desktop` için default değer `1224px`dir. Tabletler için `max-width` ile kullanılabilecek `$base-tablet-landscape` için default değer `1024px`, `min-width` ile kullanabileceğini `$base-tablet-portrait` için default değer `768px`dir. Telefonlar için de `max-width` ile kullanabileceğiniz `$base-phone` genişlik değeri `420px` dir. 
+
+#### Renkler (colors)
+Uygulama içinde kullanımının kolaylaşması ve renklerin uygulama boyunca standart kalması için renk tanımları eklenmiştir. Buradaki renkler `$color-primary`, `$color-secondary`, `$color-tertiary`, `$color-error`, `$color-text` gibi renklerin kullanım şekillerine göre isimlendirilmiştir. 
+
+Yine renkler içinde, butonların, input elemanlarının, linklerin renk tanımları da yapılmıştır.
+
+#### Fontlar
+Uygulama standardında font ailesi `"Helvetica Neue", Helvetica, Arial, sans-serif`, font boyutu da `16px` olarak belirlenmiştir. `_fonts.scss` dosyası içinde tasarımınıza göre bu tanımları revize edebilirsiniz.
+
+#### Namespace
+Melange'ın en önemli özelliklerinden biri, bir kütüphane kullanmanıza rağmen sizi bazı isim ve kod kısıtlamalarına zorunlu tutmamasıdır. `_namespace.scss_` içerisinde grid kolon isimleri, row isimleri, genel class isimleri, buton isimleri, resim klasörü gibi tanımları değiştirebilirsiniz.
+
+#### Genişlikler (sizes)
+Grid gutter genişliği, grid max kolon sayısı, input genişlikleri ve border boyutları gibi tanımları `_sizes.scss` içerisinde değiştirebilirsiniz. Benzer şekilde buton ve input alanlarının border-radius tanımlarını da bu dosya içindeki değişkenler ile yapabilirsiniz.
+
+#### Tarayıcı/Tanım Desteği (support)
+Genellikler _Caffeine_ mixinlerinde kullanılan ve uygulamanın IE8'e destek verip vermeyeceği (IE8 fallback kodu) tanımı yapılabilir.
+
+### Fluid Grid ve Genişlikler
+Melange içerisinde 2 çeşit genişlik tanımlanmışlar. Birisi fluid grid, diğeri ise fluid genişliklerdir.
+
+#### Fluid Grid
+Grid kolonları `float` ile tanımlanmıştır. Uygulamanın maksimum kolon sayısı `_sizes.scss` içerisinden tanımlanabilir. Maksimum tanımlanabilecek kolon sayısı _24_ tür. _Namespace_ içerisinde bir değişiklik yapmadıysanız grid kolon isimleri `one-column`, `two-columns`, `three-columns`... şeklinde verdiğiniz kolon sayısına kadar isimlendirilmektedir. 
+* Bir satırdaki kolonların toplam değeri, tanımladığınız max kolon sayısını geçmeyecek şekilde olmalıdır.
+* Backend tarafından programatik şekilde kolon classı verilmesini kolaylaştırmak için, kolonların prefixleri (default da _column_) hem çoğul hem de tekil olarak kullanılmaktadır. Örn: hem `one-column` hem de `one-columns` classı üretilmektedir. 
+* Nested grid kullanımında row-parentlarına `.namespacesiniz-kolon-adiniz-parent` (default durumda `.column-parent`) classını verebilirsiniz.
+
+Grid kolonları arasında boşluklar `padding` ile verilmiştir ve `$base-gutter` tanımına göre grid kolonunun her iki köşesine uygulanmaktadır. Dolayısı ile tasarımınızda iki grid arasında boşluk 20px olarak tanımlanmış ise, `$base-gutter` tanımınızı `10px` olarak yapmanız gerekmektedir.
+
+Gridin satırının başındaki, sonundaki ya da iki tarafındaki `$base-gutter` dan kaynaklı boşlukları kaldırmak için grid `row` elemanına `pull` (grid başındaki boşluğu alır), `push` (grid sonundaki boşluğu alır), `pull-push` (gridin iki tarafındaki boşluğu alır) classları kullanılabilir.
+
+Bazı durumlarda gridiniz içindeki satırının tamamında kolon kullanmayabilirsiniz. Bu durumda satırdaki kolon sayısını tamamlayabilmek için _offset_ tanımlarını kullanabilirsiniz. _offset_ tanımları da grid mantığında isimlendirilmiştir. Standart durumda `offset-by-one`, `offset-by-two`, `offset-by-three` ... şeklinde verdiğiniz kolon sayısının bir eksiğine kadar isimlendirilmektedir.
+* Offset kullanıldığı durumlarda da, kolon sayısı ile offset miktarının toplamın max kolon sayısına eşit olması beklenmektedir.
+* Bir elemanı gridin tamamı kadar kaydırmak alt satıra atmak ile aynı olacağı için, kolonun max sayısı miktarında _offset_ tanımı bulunmamaktadır.
+
+#### Fluid Genişlikler
+Grid şeklinde kullanılmayacak, içinde bulunduğu elemanın genişliğine göre kendisini oranlayacak büyüklükler için `fragment` dediğimiz genişlikler eklenmiştir. Fragment genişlikleri için en fazla 12de 1e kadar bir parça tanımlanabilir. Konuşma dilinden esinlenerek, fragment isimleri `one-whole`, `one-half`, `two-thirds`, `three-quarters` gibi isimlendirilmiştir.
+* Her fragmentin kendisi kadar uzunluğu zaten `one-whole` yani %100 olacağı için, bütün fragmentlerin son değeri yoktur. Örn: yarım tanımı `half` için sadece `one-half` tanımı vardır ama `two-half` tanımı yoktur. Çeyrek tanımları için `one-quarter`, `two-quarters` ve `three-quarters` tanımları varken, `four-quarter` zaten `one-whole` olacağı, bunun tanımı yapılmamıştır.
+* Farklı fragmentler içindeki aynı genişlikler ayrı ayır tanımlanmak yerine, kodu sadeleştirmek açısında gruplanmıştır. Örn: aynı genişlikte olan `one-half`, `two-quarters`, `three-sixths`, `four-eights`, `six-twelfths` tanımları ayrı aynı `width: 50%` şeklinde tanımlanmak yerine bir arada gruplanarak tanımlanmıştır.
+* Backend tarafından programatik şekilde fragment classı verilmesini kolaylaştırmak için, fragment parçalarında hem çoğul hem de tekil olarak kullanılmaktadır. Örn: 1/3 ve daha küçük oranlar için hem `one-third` hem de `one-thirds` classı üretilmektedir. 
+
+### Global Sınıflar
+
+### Elemanlar (_elements_)
+#### Form Elemanları
+#### Listeler
+#### Linkler
+#### Tablo
+
+### Komponentler
+#### Media Komponent
