@@ -206,9 +206,48 @@ Grid şeklinde kullanılmayacak, içinde bulunduğu elemanın genişliğine gör
 * Backend tarafından programatik şekilde fragment classı verilmesini kolaylaştırmak için, fragment parçalarında hem çoğul hem de tekil olarak kullanılmaktadır. Örn: 1/3 ve daha küçük oranlar için hem `one-third` hem de `one-thirds` classı üretilmektedir. 
 
 ### Global Sınıflar
+Uygulamanın tamamında `box-sizing:border-box` olarak yapılmıştır. Bu sayede hem fluid griddeki hesaplamalar sadeleşmiş hem de herhangibir elemana yapılacak genişlik hesaplarındaki padding/border taşmalarının önüne geçilmiştir.
+
+Float edilmiş satırların, containerdan taşmasını engellemek için `clearfix` tanımı `group` classı olarak eklenmiştir. İçerisindeki elemanların float tanımı aldığı container elemanlara `group` classı verilerek content-overflow problemi engellenebilir.
+
+Elemanları resetlemek, ortalamak gibi helper classlar eklenmiştir.
+* `%reset`; elemanların _margin, padding, border, background, list-style_ tanımlarını `0` ya da `none` olarak overwrite eder.
+* `%center`, `%vertical`, `%horizontal`; elemanları belirlenen konumlara ortalamaya yarar. `Caffeine` kullanıldığı durumlarda, dilerseniz `Caffeine`'e ait `center()`, `center-vertical()`, ya da `center-horizontal()` mixinleri de kullanılabilir.
+
+İçerik dilinin yazım yönünden bağımsız olarak (hem soldan sağa hem de sağdan sola) tanımlanmış metin ve eleman hizalama classları, global sınıflar içinde tanımlanmıştır.
+* `.move-to-start`; elemanın satırın başına hizalar (ltr için sola, rtl için sağa)
+* `.move-to-end`; elemanın satırın sonuna hizalar (ltr için sağa, rtl için sola)
+* `.align-start`; metinleri okuma yönünün başına hizalar (ltr için sola, rtl için sağa)
+* `.align-end`; metinleri okuma yönünün sonuna hizalar (ltr için sağa, rtl için sola)
 
 ### Elemanlar (_elements_)
+Elemanlar, HTML içinde kullanılacak en küçük sınıflar veya doğrudan HTML etiketlere verilmiş tanımları barındırmaktadır.
+
 #### Form Elemanları
+Formlar içerisinde kullanılan fieldlar ve butonları genel olarak bir grup olarak algılandığı için _form-elements_ içinde tanımlanmıştır.
+* __buttons__:  `.button` classı buton olarak kullanılacak link, button ve input elemanlarını biçimlendirmek için kullanılmaktadır.
+-Butonlarda hover ve basma etkileşimi için transition eklenmiştir.  
+-Tıklama sırasında metin seçilmiş gibi gözükmesini engelmek için `disable-text-selection` metodu eklenmiştir.  
+-Basma efekti için `inset` box-shadow tanımı bulunmaktadır.  
+-Butonun standart rengi, metin ile kenar boşlukları, border-radius gibi tanımların hepsi _settings_ içinden değiştirilebilir.
+    * _primary-action_: Butonun call-to-action amaçlı (form submit, register vs gibi) kullanılacağı durumda, aksiyon önceliğine göre birincil öncelik olarak tanımlanmıştır. Default class ismi `.primary-action` dır. Ayrıca `.button` classı tanımlanması gerekmez. 
+    * _secondary-action_: Butonun ikincil öncelikli call-to-action amaçlı (browse, check) kullanılacağı durumlar için tanımlanmıştır. Default class ismi `.secondary-action`dır. Ayrıca `.button` classı tanımlanması gerekmez.
+    * _tertiary-action_: Butonun üçüncül öncelikli call-to-action amaçlı kullanılacağı durumlar için tanımlanmıştır. Default class ismi `.tertiary-action`dır. Ayrıca `.button` classı tanımlanması gerekmez.
+    * _cancel-action_: Butonun işlemi iptal edecek call-to-action amaçlı (cancel, back) kullanılacağı durumlar için tanımlanmıştır. Default class ismi `.cancel-action`dır. Ayrıca `.button` classı tanımlanması gerekmez.
+* __fields__: `fieldset` ve `legend` tanımları yapılmıştır.
+-Legend tanımı daha kolay stillendirilmesi için `block` şeklinde getirilmiştir.
+    * _form-elements_: Genel olarak form içindeki inputların konulacağı sırasız liste (`ul`) için kurgulanmıştır. `%reset` tanımı uygulanmış ve formun her satırı için kullanılacak `li` elemanlarına `1em` yüksekliğinde bottom margin eklenmiştir. 
+* __inputs__: Kolay tanımlama ve kullanım için `$_text-fields`, `$_checkable_fields`, `$_media-fields`, `$_button-fields` şeklinde input typelarına göre gruplanmışlardır.  
+-Default olarak text-fieldlar için `.text-field` classı eklenmiştir. Bu sayede, input gibi gözükecek bazı alanlara bu classı uygulama imkanı sağlanmıştır.  
+-Text-fieldların `focus`, `active`, `readonly`, `disabled` görünümleri _settings_ içinden değiştirilebilir.  
+-Text-fieldlarına border-radius, padding, background ve border tanımları yine _settings_ içinden değiştirilebilir.  
+-Checkable-fieldların (checkbox, radio) metinler ile daha rahat hizalanması için `vertical-align: middle` tanımı eklenmiştir.
+* __labels__: Erişilebilirlik ve kullanılabilirlik prensipleri açısından, her input'un bir `label` içinde olması tavsiye edilmektedir. Bu labeller için de `item` classı tanımlanmıştır.   
+-Her label içerisinde bir tane `item-label` classına sahip `span` bir de inputun kendisinin olması beklenmektedir.
+-Label içerisinde label metni ile inputu alt alta göstermek için `label` elemanına `item-stacked`, yan yana göstermek için de `label` elemanına `item-field` classı eklenebilir.  
+-Label'ın hata mesajı gösterimi için `item-error` classı `label` elemanına eklenebilir.  
+-Labelların altında fieldlar ile alakalı yardım metni gösterimleri için `field-help` classı kullanılabilir.
+
 #### Listeler
 #### Linkler
 #### Tablo
