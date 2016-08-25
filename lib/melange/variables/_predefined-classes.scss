@@ -1,0 +1,20 @@
+/* @author Bilal Cinarli */
+
+/** -------------------------------------------
+    Predefined Classes
+    ------------------------------------------- **/
+/*
+ * In somecases predefined classes can stay only as placeholder
+ * If set `false` there will be no output for these placeholder classess unless
+ * @extend method used. Otherwise both a placeholder version and @extended version will be
+ * availabled.
+ *
+ * e.g.
+ * `false` case;
+ * %group {} placeholder is available for extending.
+ *
+ * `true` case;
+ * %group {} placeholder is available for extending. and
+ * .group {} class will also available for direct usage
+ */
+$predefined-classes: true !default;

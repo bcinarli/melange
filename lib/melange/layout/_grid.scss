@@ -8,12 +8,12 @@
  *
  * Apart from our generic widths, columns have gutter for spacing and they are floated by default.
  */
-@mixin grid-columns() {
+@mixin grid-columns {
     $column-width: 100/$base-grid-columns;
     $length: length($numbers);
 
     @if $base-grid-columns > $length {
-        @error "Named numbers in your grid definitions are supported up to #{$length} columns \a but you tried to define grid columns up to #{$base-grid-columns}, you need the change your column amount \a smaller than #{$length} or update you $numbers variable in your settings files matching your column size.";
+        @error 'Named numbers in your grid definitions are supported up to #{$length} columns \a but you tried to define grid columns up to #{$base-grid-columns}, you need the change your column amount \a smaller than #{$length} or update you $numbers variable in your settings files matching your column size.';
     }
 
     @for $i from 1 through $base-grid-columns {
@@ -21,15 +21,16 @@
         $classname: #{$namespace}#{nth($numbers, $i)}-#{$column-name};
         $classname-plural: #{$namespace}#{nth($numbers, $i)}-#{$column-name-plural};
 
-        @if map-has-key($_width-fragments, "#{$width}") {
+        @if map-has-key($_width-fragments, '#{$width}') {
+            $mapped: map-get($_width-fragments, '#{$width}');
+
             .#{$classname},
             .#{$classname-plural} {
-                $mapped: map-get($_width-fragments, "#{$width}");
                 @extend %#{$mapped};
             }
         } @else {
             // globally modify the defined fragment list
-            $_width-fragments: map-merge($_width-fragments, ("#{$width}": $classname)) !global;
+            $_width-fragments: map-merge($_width-fragments, ('#{$width}': $classname)) !global;
 
             // placeholder class for width fragment for extending classes
             %#{$classname} {
@@ -49,7 +50,7 @@
  *
  * When you need much larger spacing between grid columns, you can offset a column by one or more column widths
  */
-@mixin offset() {
+@mixin offset {
     $column-width: 100/$base-grid-columns;
     $last-offset: $base-grid-columns - 1;
 
@@ -64,44 +65,84 @@
  * Row
  * Row encapsulation for columns
  */
-.#{$namespace}#{$row-name} {
-    @extend .group;
+%melange-row {
+    @extend %melange-group;
 }
 
-.pull {
+%melange-pull {
     margin-left: -$base-gutter;
 }
 
-.push {
+%melange-push {
     margin-right: -$base-gutter;
 }
 
-.pull-push {
-    margin-left: -$base-gutter;
+%melange-pull-push {
     margin-right: -$base-gutter;
+    margin-left: -$base-gutter;
+}
+
+@if ($predefined-classes) {
+    .#{$namespace}#{$row-name} {
+        &::after {
+            display: table;
+            clear: both;
+            content: '';
+        }
+    }
+
+    #{$row-pull} {
+        @extend %melange-pull;
+    }
+
+    #{$row-push} {
+        @extend %melange-push;
+    }
+
+    #{$row-pull-push} {
+        @extend %melange-pull-push;
+    }
 }
 
 /**
  * Columns
  * Better controlling the width, gutter defined as right & left padding
  */
-.#{$column-name} {
-    @extend %column;
+%melange-column {
+    @extend %melange-line-start;
 }
 
-[class*="-#{$column-name}"] {
+%melange-columns {
+    @extend %melange-line-start;
     position: relative;
-    float: left;
     padding: 0 $base-gutter;
-
-    &.#{$namespace}#{$column-name}-parent {
-        // for nested columns, remove paddings for the parent grid column
-        padding: 0;
-    }
 }
 
-[class*="#{$column-name}-reverse"] {
-    float: right;
+%melange-column-parent {
+    // for nested columns, remove paddings for the parent grid column
+    padding: 0;
+}
+
+%melange-column-reverse {
+    @extend %melange-line-end;
+}
+
+@if ($predefined-classes) {
+    .#{$column-name} {
+        @extend %melange-column;
+    }
+
+    [class*='-#{$column-name}'] {
+        @extend %melange-columns;
+    }
+
+    .#{$namespace}#{$column-name}-parent {
+        @extend %melange-column-parent;
+    }
+
+    [class*='#{$column-name}-reverse'] {
+        @extend %melange-column-reverse;
+    }
 }
 
 /**
@@ -110,10 +151,14 @@
  * @see melange/variables/_sizes.scss
  * @see settings/_sizes.scss
  */
-@include grid-columns();
+@if ($predefined-classes) {
+    @include grid-columns;
+}
 
 /**
  * Offsets
  * Sets the offsets classes according to column number defined in $base-grid-columns
  */
-@include offset();
+@if ($predefined-classes) {
+    @include offset;
+}

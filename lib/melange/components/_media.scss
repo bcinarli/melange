@@ -10,19 +10,19 @@
  */
 
 .media {
-    @extend .group;
-}
+    @extend %melange-button;
 
-.media-visual {
-    display: block;
-    float: left;
-    margin-right: $base-spacing;
-}
+    &-visual {
+        display: block;
+        margin-right: $base-spacing;
+        float: left;
+    }
 
-.media-text {
-    + .media-visual { // visual added after text
-        float: right;
-        margin-right: auto;
-        margin-left: $base-spacing;
+    &-text {
+        + .media-visual { // visual added after text
+            margin-right: auto;
+            margin-left: $base-spacing;
+            float: right;
+        }
     }
 }

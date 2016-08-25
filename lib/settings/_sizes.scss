@@ -12,7 +12,6 @@
 $base-spacing: null;
 $base-input-spacing: null;
 
-
 /**
  * Grid gutter and columns
  *
@@ -24,10 +23,9 @@ $base-input-spacing: null;
  * @default $base-float-widths: true
  */
 
-$base-gutter        : null;
-$base-grid-columns  : null;
-$base-float-widths  : null;
-
+$base-gutter: null;
+$base-grid-columns: null;
+$base-float-widths: null;
 
 /**
  * Border Widths

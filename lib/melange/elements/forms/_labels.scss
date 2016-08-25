@@ -16,10 +16,16 @@
  *
  */
 
-label,
-.label {
-    position: relative;
+%melange-label {
     display: inline-block;
+    position: relative;
+}
+
+@if ($predefined-classes) {
+    label,
+    #{$form-label} {
+        @extend %melange-label
+    }
 }
 
 /**
@@ -29,61 +35,91 @@ label,
  * item-stacked is for showing label name and field in rows
  * item-row is however, stacking the label wrappers together
  */
-.item {
-    &-field {
-        margin-right: 1em;
+%melange-item-field {
+    margin-right: 1em;
+}
+
+%melange-item-stacked-not-only {
+    margin-bottom: 1em;
+}
+
+%melange-item-row-neighboured {
+    margin-top: 1em;
+}
+
+%melange-item-error {
+    color: $color-error;
+}
+
+@if ($predefined-classes) {
+    #{$form-item-field} {
+        @extend %melange-item-field;
     }
-    
-    &-stacked:not(:only-child){
-        margin-bottom: 1em;
+
+    #{$form-item-stacked} {
+        &:not(:only-child) {
+            @extend %melange-item-stacked-not-only;
+        }
     }
-    
-    &-row + .item-row {
-        margin-top: 1em;
+
+    #{$form-item-row} {
+        + #{$form-item-row} {
+            @extend %melange-item-row-neighboured;
+        }
     }
-    
-    &-error {
-        color: $color-error;
+
+    #{$form-item-error} {
+        @extend %melange-item-error;
     }
 }
 
+/**
+ * Label texts
+ */
+%melange-item-label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
     /**
-     * Label texts
+     * When item is stacked, label text will be over the label input
      */
-    .item-label,
-    .field-label {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-
-        /**
-         * When item is stacked, label text will be over the label input
-         */
-        .item-stacked & {
-            display: block;
-        }
-
-        /**
-         * Required field has a star at the beginning of label
-         */
-        .required & {
-            &:before {
-                content: "*";
-                position: absolute;
-                left: -10px;
-            }
-        }
+    #{$form-item-stacked} & {
+        display: block;
     }
 
+    /**
+     * Required field has a star at the beginning of label
+     */
+    #{$form-item-required} & {
+        &::before {
+            position: absolute;
+            left: -10px;
+            content: '*';
+        }
+    }
+}
+
+@if ($predefined-classes) {
+    #{$form-item-label} {
+        @extend %melange-item-label;
+    }
+}
 
 /**
  * Field Help
  *
  * Although this is not an actual label, it can be used as helper text for the field
  */
-.field-help {
+%melange-item-help {
     font: {
         size: .8em;
         style: italic;
+    }
+}
+
+@if ($predefined-classes) {
+    #{$form-item-help} {
+        @extend %melange-item-help;
     }
 }

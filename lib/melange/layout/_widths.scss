@@ -12,14 +12,14 @@
  * @depends $numbers: number-to-name conversion list for human readable class names
  * @depends $ordinals: defines the human reader total chunks
  */
-@mixin widths($fragment: 1){
+@mixin widths($fragment: 1) {
     $fragment-size: 100/$fragment;
     $end: $fragment - 1; // last size always 100% so no need to define it every time
 
     $length: length($ordinals);
 
     @if $fragment > $length {
-        @error "Fragmented width names (ordinals) are supported up to #{$length} fragment \a but you tried to define #{$fragment}, you need the change your fragment amount \a smaller than #{$length} or update you $ordinals & $ordinals-plural variables in your settings files matching your fragment size.";
+        @error 'Fragmented width names (ordinals) are supported up to #{$length} fragment \a but you tried to define #{$fragment}, you need the change your fragment amount \a smaller than #{$length} or update you $ordinals & $ordinals-plural variables in your settings files matching your fragment size.';
     }
 
     @if $end == 0 {
@@ -32,23 +32,23 @@
         $width: ($fragment-size * $i) * 1%;
         $classname: #{$namespace}#{nth($numbers, $i)}-#{$ord};
 
-        @if map-has-key($_width-fragments, "#{$width}"){
+        @if map-has-key($_width-fragments, '#{$width}') {
+            $mapped: map-get($_width-fragments, '#{$width}');
+
             .#{$classname} {
-                $mapped: map-get($_width-fragments, "#{$width}");
                 @extend %#{$mapped};
             }
-        }
-        @else {
+        } @else {
             // globally modify the defined fragment list
-            $_width-fragments: map-merge($_width-fragments, ("#{$width}": $classname)) !global;
+            $_width-fragments: map-merge($_width-fragments, ('#{$width}': $classname)) !global;
 
             // placeholder class for width fragment for extending classes
             %#{$classname} {
-                width: $width
+                width: $width;
             }
 
             .#{$classname} {
-                @if($base-float-widths == true){
+                @if ($base-float-widths == true) {
                     @extend %column;
                 }
                 @extend %#{$classname};
@@ -58,56 +58,54 @@
                 // also add singular version
                 .#{nth($numbers, $i)}-#{nth($ordinals, $fragment)} {
                     // extend plural class
-                    @extend .#{$classname};
+                    @if ($base-float-widths == true) {
+                        @extend %column;
+                    }
+                    @extend %#{$classname};
                 }
             }
         }
     }
 }
 
-/**
- * Whole
- */
-@include widths();
+@if ($predefined-classes) {
+    /**
+    * Whole
+    */
+    @include widths;
 
+    /**
+     * Half
+     */
+    @include widths(2);
 
-/**
- * Half
- */
-@include widths(2);
+    /**
+     * Thirds
+     */
+    @include widths(3);
 
+    /**
+     * Quarters
+     */
+    @include widths(4);
 
-/**
- * Thirds
- */
-@include widths(3);
+    /**
+     * Fifths
+     */
+    @include widths(5);
 
+    /**
+     * Eights
+     */
+    @include widths(8);
 
-/**
- * Quarters
- */
-@include widths(4);
+    /**
+     * Tenths
+     */
+    @include widths(10);
 
-
-/**
- * Fifths
- */
-@include widths(5);
-
-
-/**
- * Eights
- */
-@include widths(8);
-
-
-/**
- * Tenths
- */
-@include widths(10);
-
-
-/**
- * Twelfths
- */
-@include widths(12);
+    /**
+     * Twelfths
+     */
+    @include widths(12);
+}

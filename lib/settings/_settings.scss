@@ -3,7 +3,7 @@
 /**
  * System wide settings
  *
- * All the imported values are set to "null" if they have a default value.
+ * All the imported values are set to 'null' if they have a default value.
  * So if you want to use them as default, do not change to null value.
  */
 
@@ -14,35 +14,35 @@
 //
 // Support for systems/browsers
 //
-@import "supports";
+@import 'supports';
 
 //
 // Namespace definition
 //
-@import "namespace";
+@import 'namespace';
 
 //
 // Animation definitions
 //
-@import "animations";
+@import 'animations';
 
 //
 // Size definitions
 //
-@import "sizes";
+@import 'sizes';
 
 //
 // Breakpoints
 //
-@import "breakpoints";
+@import 'breakpoints';
 
 //
 // Font definitions
 //
-@import "fonts";
+@import 'fonts';
 
 
 //
 // Color definitions
 //
-@import "colors";
+@import 'colors';

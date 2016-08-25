@@ -10,18 +10,17 @@ fieldset {
     @extend %reset;
 }
 
-
 /**
  * Form Elements Holder
  * A list or a div for group form elements
  */
-.form-elements {
+#{$form-elements} {
     @extend %reset; // first reset the element styles
 
     /**
      * Forms mostly build with unordered list.
 
-        <ul class="form-element group">
+        <ul class="form-elements group">
             <li class="group">
                 <label class="item-field">
                     <span class="item-name">Label</span>
@@ -35,7 +34,6 @@ fieldset {
         margin-bottom: 1em;
     }
 }
-
 
 /**
  * Legend

@@ -9,42 +9,42 @@
     General Settings
     ------------------------------------------- **/
 // add settings to your styles before melange.
-//@import "settings/settings";
+//@import 'settings/settings';
 
 
 
 /** -------------------------------------------
     Internal Variables
     ------------------------------------------- **/
-@import "melange/variables/variables";
+@import 'melange/variables/variables';
 
 
 /** -------------------------------------------
     Melange Internal Methods
     ------------------------------------------- **/
 // use Caffeine
-//@import "melange/_system/system";
+//@import 'melange/_system/system';
 
 
 /** -------------------------------------------
     Global Styles
     ------------------------------------------- **/
-@import "melange/globals/globals";
+@import 'melange/globals/globals';
 
 
 /** -------------------------------------------
     Layout Definitions
     ------------------------------------------- **/
-@import "melange/layout/layout";
+@import 'melange/layout/layout';
 
 
 /** -------------------------------------------
     Base Element Styles
     ------------------------------------------- **/
-@import "melange/elements/elements";
+@import 'melange/elements/elements';
 
 
 /** -------------------------------------------
     Default Components
     ------------------------------------------- **/
-@import "melange/components/components";
+@import 'melange/components/components';

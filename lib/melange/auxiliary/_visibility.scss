@@ -7,8 +7,8 @@
  * Hide element
  */
 .is-hidden,
-.hide // for fallback older versions
-{
+// for fallback older versions
+.hide {
     display: none;
 }
 
@@ -18,14 +18,14 @@
  * visually invisible for accessibility 
  */
 .for-screenreader-only {
-	position: absolute;
-	overflow: hidden;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	clip: rect(0 0 0 0);
-	clip: rect(0, 0, 0, 0);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
 }
 
 /**
@@ -33,22 +33,22 @@
  */
 .desktop-visible {
     // do not interfere element's display, just hide when not needed
-    @media screen and (max-width: $base-desktop - 1px){
-    	display: none;
+    @media screen and (max-width: $base-desktop - 1px) {
+        display: none;
     }
 }
 
 .desktop-hidden,
 .tablet-visible {
-    @media screen and (min-width: $base-desktop){
-    	display: none;
+    @media screen and (min-width: $base-desktop) {
+        display: none;
     }
 }
 
 .tablet-hidden {
     // hide if in the tablet region
     @media screen and (min-width: $base-phone + 1px) and (max-width: $base-tablet-landscape) {
-    	display: none;
+        display: none;
     }
 }
 

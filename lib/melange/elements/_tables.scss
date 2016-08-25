@@ -15,8 +15,10 @@ table {
  * TFoot
  */
 tfoot {
-    td:only-child {
-        text-align: right;
+    td {
+        &:only-child {
+            text-align: end;
+        }
     }
 }
 
@@ -27,5 +29,5 @@ tfoot {
 th,
 td {
     padding: $base-spacing/2;
-    text-align: left;
+    text-align: start;
 }

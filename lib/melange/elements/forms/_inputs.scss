@@ -9,18 +9,18 @@
  * .text-field class is added in order to styling other elements like a text field
  */
 
-%text-field {
-    outline: 0;
+%melange-text-field {
     padding: $base-input-spacing;
     border: $base-border-width solid $base-border-color;
+    outline: 0;
     background: $base-field-background;
     color: inherit;
     font: {
         size: 1rem;
         weight: normal;
     }
-    
-    @if($base-field-border-radius != null){
+
+    @if ($base-field-border-radius != null) {
         border-radius: $base-field-border-radius;
     }
 
@@ -32,16 +32,16 @@
 
     &[readonly],
     &.readonly {
-        cursor: default;
         border-color: $base-border-readonly;
         background-color: $base-field-readonly;
+        cursor: default;
     }
 
     &[disabled],
     &.disabled {
-        cursor: default;
         border-color: $base-border-disabled;
         background-color: $base-field-disabled;
+        cursor: default;
     }
 
     &.item-error {
@@ -49,45 +49,47 @@
     }
 }
 
-#{$_text_fields},
-textarea,
-.text-field {
-    -webkit-appearance: none;
-    @extend %text-field;
+@if ($predefined-classes) {
+    #{$-text-fields},
+    textarea,
+    .text-field {
+        @extend %melange-text-field;
+        -webkit-appearance: none;
+    }
 }
-
 
 /**
  * Checkable (checkbox, radio) field styles
  */
-#{$_checkable_fields} {
-    vertical-align: middle;
-
-    /**
-     * Fields and labels together
-     *
-        <label class="item-field">
-            <input type="checkbox" />
-            <span class="item-label">Label</span>
-        </label>
-     */
-    + .field-label,
-    + .item-label {
-        font-weight: normal;
-        margin-left: .25em;
+@if ($predefined-classes) {
+    #{$-checkable-fields} {
         vertical-align: middle;
+
+        /**
+         * Fields and labels together
+         *
+            <label class="item-field">
+                <input type="checkbox" />
+                <span class="item-label">Label</span>
+            </label>
+         */
+        + #{$form-item-label} {
+            margin-left: .25em;
+            font-weight: normal;
+            vertical-align: middle;
+        }
     }
 }
-
 
 /**
  * Other input types
  */
-#{$_media_fields},
-#{$_button_fields} {
-    //width: auto;
+@if ($predefined-classes) {
+    #{$-media-fields},
+    #{$-button-fields} {
+        //width: auto;
+    }
 }
-
 
 /**
  * Textarea

@@ -8,58 +8,78 @@
  * all elements' box-sizing set to border-box
  */
 html {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
- * {
-     &,
-     &:after,
-     &:before {
-         box-sizing: inherit;
-     }
- }
- 
- /**
-  * Overwrite normalize.css's box-sizing definitions
-  */
-hr,
-input[type="search"] {
-	box-sizing: inherit;
+* {
+    &,
+    &::after,
+    &::before {
+        box-sizing: inherit;
+    }
+}
+
+/**
+ * Overwrite normalize.css's box-sizing definitions
+ */
+hr {
+    box-sizing: inherit;
+}
+
+input {
+    &[type='search'] {
+        box-sizing: inherit;
+    }
 }
 
 /**
  * Set html and body sizes to 100% for better wrapping
  * Remove margins and padding to use all viewport
  */
-html, body {
-    @include dims(100%);
+html,
+body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
-
 
 /**
  * Remove top margin and padding from certain elements
  * generally we never use top margin anyway
  */
 
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p,
-ul, ol, li,
-table, th, td {
+ul,
+ol,
+li,
+table,
+th,
+td {
     margin-top: 0;
     padding: 0;
 }
-
 
 /**
  * And good-ol friend clearfix
  * For a meaningful name our clearfix class named as group
  */
-.group {
-    &:after {
-        content: "";
+%melange-group {
+    &::after {
         display: table;
         clear: both;
+        content: '';
+    }
+}
+
+@if ($predefined-classes) {
+    .group {
+        @extend %melange-group;
     }
 }

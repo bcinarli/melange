@@ -12,10 +12,14 @@ $namespace: null !default;
 /**
  *  Text field lists
  */
-$_text_fields: 'input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]';
-$_checkable_fields: 'input[type="checkbox"], input[type="radio"]';
-$_media_fields: 'input[type="file"], input[type="image"]';
-$_button_fields: 'input[type="submit"], input[type="reset"], input[type="button"]';
+$-text-fields: 'input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]';
+$_text_fields: $-text-fields;
+$-checkable-fields: 'input[type="checkbox"], input[type="radio"]';
+$_checkable_fields: $-checkable-fields;
+$-media-fields: 'input[type="file"], input[type="image"]';
+$_media_fields: $-media-fields;
+$-button-fields: 'input[type="submit"], input[type="reset"], input[type="button"]';
+$_button_fields: $-button-fields;
 
 /**
  * Class names for grid
@@ -23,14 +27,31 @@ $_button_fields: 'input[type="submit"], input[type="reset"], input[type="button"
 $row-name: 'row' !default;
 $column-name: 'column' !default;
 $column-name-plural: 'columns' !default;
+$row-pull: '.pull' !default;
+$row-push: '.push' !default;
+$row-pull-push: '.pull-push' !default;
+
+/**
+ * Class names for forms
+ */
+$form-elements: '.form-elements' !default;
+$form-label: '.label' !default;
+$form-item-field: '.item-field' !default;
+$form-item-stacked: '.item-stacked' !default;
+$form-item-row: '.item-row' !default;
+$form-item-error: '.item-error' !default;
+$form-item-required: '.item-required, .is-required' !default;
+$form-item-label: '.item-label' !default;
+$form-item-help: '.item-help' !default;
 
 /**
  * Button names for action
  */
 // only used for similar class selector
+$standard-button: 'button' !default;
 $action-button: '-action' !default;
 // for separating button wrappers
-$action-button-wrapper: '-actions' !default; 
+$action-button-wrapper: '-actions' !default;
 // other button classes
 $primary-button: 'primary-action' !default;
 $secondary-button: 'secondary-action' !default;
@@ -41,5 +62,5 @@ $cancel-button: 'cancel-action' !default;
  * Folders
  * Not actually a namespace but folder names also have different preferences
  */
-$images : '../images/' !default;
+$images: '../images/' !default;
 $retina-suffix: '@2x' !default;

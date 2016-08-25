@@ -7,7 +7,7 @@
  * Rather then using device specific breakpoints, width breakpoints are more 
  * appropriate for wider range of devices.
  */
- 
+
 /**
  * Wide Screen
  */
@@ -34,10 +34,10 @@ $base-phone: 420px !default; // max-width for phones
  * Breakpoint Map
  */
 $base-breakpoints: (
-    phone: $base-phone,
-    tablet: $base-tablet,
-    tablet-portrait: $base-tablet-portrait,
-    tablet-landscape: $base-tablet-landscape,
-    desktop: $base-desktop,
-    widescreen: $base-widescreen
+        phone: $base-phone,
+        tablet: $base-tablet,
+        tablet-portrait: $base-tablet-portrait,
+        tablet-landscape: $base-tablet-landscape,
+        desktop: $base-desktop,
+        widescreen: $base-widescreen
 )

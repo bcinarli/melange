@@ -6,44 +6,49 @@
 //
 // Internal variables
 //
-@import "internal";
+@import 'internal';
+
+//
+// Predefined Class Outputs
+//
+@import 'predefined-classes';
 
 //
 // Support for systems/browsers
 //
-@import "supports";
+@import 'supports';
 
 //
 // Default names/definitions
 //
-@import "namespace";
+@import 'namespace';
 
 //
 // Number to name conversion for human readable classes
 //
-@import "number-to-names";
+@import 'number-to-names';
 
 //
 // Animations
 //
-@import "animations";
+@import 'animations';
 
 //
 // Default sizes
 //
-@import "sizes";
+@import 'sizes';
 
 //
 // Default Breakpoints
 //
-@import "breakpoints";
+@import 'breakpoints';
 
 //
 // Fonts
 //
-@import "fonts";
+@import 'fonts';
 
 //
 // Colors
 //
-@import "colors";
+@import 'colors';

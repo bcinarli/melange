@@ -6,40 +6,38 @@
 /**
  * Button colors
  */
-@mixin button-colors($type){
+@mixin button-colors($type) {
     background-color: map-get($base-colors, $type);
     color: map-get($base-colors, #{$type}-text);
 
     &:hover {
         @if (map-get($base-colors, #{$type}-highlight) != null) {
             background-color: map-get($base-colors, #{$type}-highlight);
-        }
-
-        @else {
+        } @else {
             background-color: darken(map-get($base-colors, $type), 7.5);
         }
         color: map-get($base-colors, #{$type}-text);
     }
 }
 
-
 /**
  * In most cases, using buttons with button tag allows more styling options
- * it is cross browser and meaningful. Also ".button" class is added in order to
+ * it is cross browser and meaningful. Also '.button' class is added in order to
  * get button-like elements
  */
-%button {
+%melange-button {
     @include prefixer(apperance, none);
-    @include disable-text-select();
-    @include app-transition();
+    @include disable-text-select;
+    @include app-transition;
 
     display: inline-block;
-    cursor: pointer;
     padding: $base-input-spacing (3 * $base-input-spacing);
+    border: transparent;
     line-height: normal;
     text-decoration: none;
+    cursor: pointer;
 
-    @if($base-button-border-radius != null){
+    @if ($base-button-border-radius != null) {
         border-radius: $base-button-border-radius;
     }
 
@@ -60,40 +58,49 @@
  * Native button elements
  * Input button elements
  */
-button,
-input[type="submit"],
-input[type="reset"],
-input.button {
-    @extend %button;
-    border: transparent;
+@if ($predefined-classes) {
+    button {
+        @extend %melange-button;
+    }
+
+    input {
+        &[type='submit'],
+        &[type='reset'],
+        &.#{$standard-button} {
+            @extend %melange-button;
+        }
+    }
 }
 
 /**
  * Anchor and other elements
  */
-.button {
-    @extend %button;
-    text-align: center;
+@if ($predefined-classes) {
+    .#{$standard-button} {
+        @extend %melange-button;
+        text-align: center;
 
-    &,
-    &:hover,
-    &:focus,
-    &:active {
-        text-decoration: none;
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+        }
     }
 }
 
-@if($support-for-ie8 == true){
-    [class*="#{$action-button}"]{
-        @extend %button;
+@if ($support-for-ie8 == true) {
+    [class*='#{$action-button}'] {
+        @extend %melange-button;
     }
-    [class*="#{$action-button-wrapper}"] {
+
+    [class*='#{$action-button-wrapper}'] {
         display: inherit;
-        cursor: inherit;
         padding: inherit;
         background: inherit;
         font-weight: inherit;
         text-align: inherit;
+        cursor: inherit;
 
         &:hover,
         &:focus,
@@ -101,30 +108,57 @@ input.button {
             text-decoration: inherit;
         }
     }
-}
-@else {
-    [class*="#{$action-button}"]:not([class*="#{$action-button-wrapper}"]) {
-        @extend %button;
+} @else {
+    [class*='#{$action-button}'] {
+        &:not([class*='#{$action-button-wrapper}']) {
+            @extend %melange-button;
+        }
     }
 }
-/** 
+
+/**
  * Action Buttons
- * specificity increased in order to overwrite [class*="#{$action-button}"]:not([class*="#{$action-button-wrapper}"])
+ * specificity increased in order to overwrite [class*='#{$action-button}']:not([class*='#{$action-button-wrapper}'])
  * without using !important rule. By this, it can easily modified `.some-class .primary-action` selector
  */
-.#{$primary-button}.#{$primary-button} {
+%melange-primary-action {
     @include button-colors('primary');
 }
 
-.#{$secondary-button}.#{$secondary-button} {
+%melange-secondary-action {
     @include button-colors('secondary');
 }
 
-.#{$tertiary-button}.#{$tertiary-button} {
+%melange-tertiary-action {
     @include button-colors('tertiary');
 }
 
-.#{$cancel-button}.#{$cancel-button},
-input[type="reset"] {
+%melange-cancel-action {
     @include button-colors('cancel');
+}
+
+@if ($predefined-classes) {
+    .#{$primary-button} {
+        &.#{$primary-button} {
+            @include button-colors('primary');
+        }
+    }
+
+    .#{$secondary-button} {
+        &.#{$secondary-button} {
+            @include button-colors('secondary');
+        }
+    }
+
+    .#{$tertiary-button} {
+        &.#{$tertiary-button} {
+            @include button-colors('tertiary');
+        }
+    }
+
+    .#{$cancel-button} {
+        &.#{$cancel-button} {
+            @include button-colors('cancel');
+        }
+    }
 }

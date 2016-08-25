@@ -7,7 +7,7 @@
  * Name space prefix
  * Adds a defined namespace prefix to generated class names
  */
-$namespace : null;
+$namespace: null;
 
 /**
  * Class names for grid
@@ -15,8 +15,8 @@ $namespace : null;
  * @default $column-name: 'column'
  * @default $column-name-plural: 'columns'
  */
-$row-name          : null;
-$column-name       : null;
+$row-name: null;
+$column-name: null;
 $column-name-plural: null;
 
 /**
@@ -28,11 +28,11 @@ $column-name-plural: null;
  * @default $tertiary-button: 'tertiary-action';
  * @default $cancel-button: 'cancel-action';
  */
-$action-button      : null; // only used for similar class selector
-$primary-button     : null;
-$secondary-button   : null;
-$tertiary-button    : null;
-$cancel-button      : null;
+$action-button: null; // only used for similar class selector
+$primary-button: null;
+$secondary-button: null;
+$tertiary-button: null;
+$cancel-button: null;
 
 /**
  * Folders
@@ -40,5 +40,5 @@ $cancel-button      : null;
  * @default $images: '../images/'; relative to styles folder
  * @default $retina-suffix: '@2x'
  */
-$images : null;
+$images: null;
 $retina-suffix: null;
