@@ -82,7 +82,7 @@
     margin-left: -$base-gutter;
 }
 
-@if ($predefined-classes) {
+@if ($predefined-classes and $base-grid-columns > 0) {
     .#{$namespace}#{$row-name} {
         &::after {
             display: table;
@@ -127,7 +127,7 @@
     @extend %melange-line-end;
 }
 
-@if ($predefined-classes) {
+@if ($predefined-classes and $base-grid-columns > 0) {
     .#{$column-name} {
         @extend %melange-column;
     }
@@ -151,7 +151,7 @@
  * @see melange/variables/_sizes.scss
  * @see settings/_sizes.scss
  */
-@if ($predefined-classes) {
+@if ($predefined-classes and $base-grid-columns > 0) {
     @include grid-columns;
 }
 
@@ -159,6 +159,6 @@
  * Offsets
  * Sets the offsets classes according to column number defined in $base-grid-columns
  */
-@if ($predefined-classes) {
+@if ($predefined-classes and $base-grid-columns > 0) {
     @include offset;
 }

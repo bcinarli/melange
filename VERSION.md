@@ -1,4 +1,7 @@
 # Melange Change Log
+## Versiyon 0.7.1
+- CHANGE: Now you can disable oldschool floating columns by defining `$base-grid-columns: 0`
+
 ## Version 0.7.0
 - NEW: sass-lint added for better standardization
 - NEW: `%melange-*` placeholders added for most of the melange default classes.
